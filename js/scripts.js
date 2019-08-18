@@ -99,6 +99,9 @@ $(document).ready(function() {
 				$("#p-"+num).fadeToggle(200,"linear");
 		}
 	);
+	$("#menu-mobile").click(function(){ //When you click the element with hide id//
+	  $("#wrapper").fadeOut(200,"linear"); //all the paragraphs will be hidden//
+	});
 	$("[class^=show-").click(
 		function() { 
 			var num = $(this).attr('class').match(/\d+$/)[0];
