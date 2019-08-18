@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media only screen and (max-width: 414px) {
+	#logo {
+		top:10px;
+		left: 50vw;
+		left: calc(var(--vw, 1vw) * 50);
+		transform: translateX(-50%);
+	}
+	#logo svg {
+		height: 30px;
+	}
+	#left_nav {
+		top: 3vh;
+		left: 3vw;
+		top: calc(var(--vh, 1vh) * 3);
+		left: calc(var(--vw, 1vw) * 3);
+	}
+	#menu {
+		visibility: hidden;
+		display: none;
+		top:50px;
+		width: 100%;
+	} 
+	#menu li a {
+		font-size: 0.5em;
+		padding: 3px 0;
+	}
+	.extend_fx {
+		color: #24BAA0;
+		margin-bottom: 0px;
+	}
+	#vline {
+		visibility: hidden;
+		display: none;
+	}
+	#slink {
+		bottom: calc(var(--vh, 1vh) * 10);
+	}
+	#koi-container {
+		visibility: hidden;
+		display: none;
+	}
+}

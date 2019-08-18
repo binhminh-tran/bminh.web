@@ -20,14 +20,14 @@ li {
 #intro-container {
 	position: fixed;
 	overflow: hidden;
-		
+	
 	width: 100vw;
-	height: 100vh;
+	height:100vh;
+	width: calc(var(--vw, 1vw) * 100);
+	height: calc(var(--vh, 1vh) * 100);
 	
 	background-color: #000000;
-	
 	z-index: 100;
-	
 	animation: fadeOUT 1.2s 6.5s ease-in forwards;
 }
 
@@ -40,7 +40,7 @@ li {
   	left: 50%;
 	transform: translate(-50%, -50%);
 	
-	height: 17vh;
+	width: 170px;
 	animation: fadeOUT 1.2s 4s ease-in forwards;
 }
 
@@ -63,27 +63,37 @@ li {
 }
 
 /*------Dynamic Vertical Nav Bar------*/
+#logo {
+	position: fixed;
+	top: 5vh;
+	left: 7vw;
+	top: calc(var(--vh, 1vh) * 5);
+	left: calc(var(--vw, 1vw) * 7);
+}
+#logo svg {
+	height: 80px;
+}
 #left_nav {
 	position: fixed;
 	top: 5vh;
 	left: 7vw;
+	top: calc(var(--vh, 1vh) * 5);
+	left: calc(var(--vw, 1vw) * 7);
 	z-index:30;
 }
-#logo svg {
-	height: 10vh;
-}
 #vline {
-	border-left: 1px solid black;
-	opacity: 0.25;
-	height: 73vh;
+	border-left: 1px solid rgb(0, 0, 0, 0.25);
+	height: 75vh;
+	height: calc(var(--vh, 1vh) * 75);
 	position: fixed;
 	margin-left: 10px;
-	margin-top: 10px;
+	margin-top: 90px;
 	z-index: 0;
 }
 #menu {
 	margin-left: -35px;
 	top: 60vh;
+	top: calc(var(--vh, 1vh) * 60);
 	position: fixed;
 } 
 #menu li a {
@@ -91,10 +101,10 @@ li {
 	clear: both;
 	display: inline-block;
 	font-family: 'Roboto Slab', serif;
-	font-size: 1.2vh;
+	font-size: 0.8em;
 	font-weight: 400;
 	letter-spacing: 1px;
-	padding: 0.8vh 0;
+	padding: 7px 0;
 	background-color: #ffffff;
 	z-index: 1;
 	transition: all 0.5s ease-out;
@@ -108,22 +118,27 @@ li {
 }
 #slink {
 	position: fixed;
-	top: 91vh;
+	top: calc(var(--vh, 1vh) * 80 + 100px);
 }
 #slink svg {
-	width: 2.5vh;
+	width: 25px;
 }
 #slink svg:hover {
 	fill: #24BAA0;
 }
 /*------End Of Dynamic Vertical Nav Bar------*/
 
+#content {
+	width: 100vw;
+	width: calc(var(--vw, 1vw) * 100);
+}
 
 /*------Content Block #1-------------*/
-#b-home {
-	width: 100vw;
-	height: 100vh;
-	overflow: hidden;
+.block {
+	width: calc(var(--vw, 1vw) * 100);
+	height: calc(var(--vh, 1vh) * 100);
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 #b-home ul {
 	position: absolute;
@@ -228,13 +243,7 @@ li {
 /*------Content Block #2-------------*/
 #b-about {
 	position: relative;
-	width: 100vw;
-	height: 100vh;
-
 	margin-top:-15vh;
-	
-	overflow-x: hidden;
-	overflow-y: auto;
 }
 #fire-container {
 	position: absolute;
@@ -613,3 +622,11 @@ button:focus {
 }
 /*------End Of Footer----------------*/
 
+@media only screen and (max-width:414px) {
+	#logo svg {
+		height: 300px;
+	}
+	#koi-container {
+		display: none;
+	}
+}

@@ -1,11 +1,14 @@
 <!doctype html>
 <html><head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>Beta Site</title>
 
 <!--Load CSS-->
 <link href="css/normalize.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/responsive.css" rel="stylesheet" type="text/css">
 <link href="css/animate.css" rel="stylesheet" type="text/css"/>
 	
 <!--Load Scripts-->	
@@ -26,14 +29,14 @@
 <body>
 	<section id="wrapper">
 		<section id="indicator"></section>
-		<section id="intro-container">
+		<!--<section id="intro-container">
 			<div id="logo-anim"></div>
 			<h1>BÌNHMINH</h1>
+		</section>-->
+		<section id="logo">
+				<a href="home.html" target="_self"><svg id="b86ad67c-5f5a-4ed0-9bc3-1979ea3775ad" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000.1 615.53"><title>LOGO_bm</title><path d="M895,148.9C886.52,224,826.56,275.15,778.11,275.15c-66.5,0-101.69-39-154.33-39-61.33,0-106.46,66.3-106.46,71.86C525.8,233,585.76,181.79,634.21,181.79c66.5,0,101.69,39,154.33,39C849.87,220.77,895,154.46,895,148.9Z" transform="translate(0.1 -126.09)"/><path d="M292.7,400.37q-29.37-36.42-67.41-44.05,7.54-.58,15.68-.59,67.3,0,116.15,41.21,30.87,26.61,48,66.74T422.27,551q0,44.65-15.85,82.2T361,695.69q-46.29,39.06-111.44,39.06a214.56,214.56,0,0,1-23.62-1.28q40.59-6.75,70.13-45.57,20.51-27.18,32.41-65.2a258.21,258.21,0,0,0,11.91-77.65,249.72,249.72,0,0,0-12.63-78.79Q315.11,428,292.7,400.37Z" transform="translate(0.1 -126.09)"/><path d="M51,691.86q15.45-20.58,15.46-69V126.09L198.21,148c-23.9,0-41,12-51.41,25.69s-15.55,36.07-15.55,67.14V637.14c0,17.06-1.43,90.2-4.29,104.47L-.1,717.79C23.66,717.79,40.68,705.57,51,691.86Z" transform="translate(0.1 -126.09)"/><path d="M798.26,460.48l50.41,154.84q19,60.1,19,79.18c0,25.76-17.83,44.85-53.51,46.76H1000c-13.69-2.87-23.72-12.09-30.1-17.19q-16.71-12.41-32.49-59.64l-11.52-34.84L830.4,340.42l-39,98.93Z" transform="translate(0.1 -126.09)"/><path d="M537.9,741.26c-20.28-6.73-33.34-18.18-42.27-27.64-13.32-14.11-21.64-33-22.7-56.57q-10.79,26.72-18.88,41-9.32,16.45-19.83,24.57c-10.82,8.91-23.09,18.62-36.79,18.62Z" transform="translate(0.1 -126.09)"/><path d="M560,440.52l40.09-100.1L704.51,659.56l16.69,49.77c5.66,18.37,21.43,30.69,47.31,31.93H582.69c15.6-2.23,26.59-10.83,33-15.27q15.3-10.51,15.29-31.49,0-16.69-9.05-47.22L566.22,461.4Z" transform="translate(0.1 -126.09)"/><path d="M830.4,340.42l-54.24,137.5c10.84-13.1,19.58-25.18,29.44,5.12" transform="translate(0.1 -126.09)"/><path d="M600.06,340.42l-56.64,137.5c10.83-13.1,19.57-25.18,29.43,5.12" transform="translate(0.1 -126.09)"/></svg></a>
 		</section>
 		<section id="left_nav">
-			<section id="logo">
-				<a href="home.html" target="_self"><svg id="b86ad67c-5f5a-4ed0-9bc3-1979ea3775ad" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000.1 615.53"><title>LOGO_bm</title><path d="M895,148.9C886.52,224,826.56,275.15,778.11,275.15c-66.5,0-101.69-39-154.33-39-61.33,0-106.46,66.3-106.46,71.86C525.8,233,585.76,181.79,634.21,181.79c66.5,0,101.69,39,154.33,39C849.87,220.77,895,154.46,895,148.9Z" transform="translate(0.1 -126.09)"/><path d="M292.7,400.37q-29.37-36.42-67.41-44.05,7.54-.58,15.68-.59,67.3,0,116.15,41.21,30.87,26.61,48,66.74T422.27,551q0,44.65-15.85,82.2T361,695.69q-46.29,39.06-111.44,39.06a214.56,214.56,0,0,1-23.62-1.28q40.59-6.75,70.13-45.57,20.51-27.18,32.41-65.2a258.21,258.21,0,0,0,11.91-77.65,249.72,249.72,0,0,0-12.63-78.79Q315.11,428,292.7,400.37Z" transform="translate(0.1 -126.09)"/><path d="M51,691.86q15.45-20.58,15.46-69V126.09L198.21,148c-23.9,0-41,12-51.41,25.69s-15.55,36.07-15.55,67.14V637.14c0,17.06-1.43,90.2-4.29,104.47L-.1,717.79C23.66,717.79,40.68,705.57,51,691.86Z" transform="translate(0.1 -126.09)"/><path d="M798.26,460.48l50.41,154.84q19,60.1,19,79.18c0,25.76-17.83,44.85-53.51,46.76H1000c-13.69-2.87-23.72-12.09-30.1-17.19q-16.71-12.41-32.49-59.64l-11.52-34.84L830.4,340.42l-39,98.93Z" transform="translate(0.1 -126.09)"/><path d="M537.9,741.26c-20.28-6.73-33.34-18.18-42.27-27.64-13.32-14.11-21.64-33-22.7-56.57q-10.79,26.72-18.88,41-9.32,16.45-19.83,24.57c-10.82,8.91-23.09,18.62-36.79,18.62Z" transform="translate(0.1 -126.09)"/><path d="M560,440.52l40.09-100.1L704.51,659.56l16.69,49.77c5.66,18.37,21.43,30.69,47.31,31.93H582.69c15.6-2.23,26.59-10.83,33-15.27q15.3-10.51,15.29-31.49,0-16.69-9.05-47.22L566.22,461.4Z" transform="translate(0.1 -126.09)"/><path d="M830.4,340.42l-54.24,137.5c10.84-13.1,19.58-25.18,29.44,5.12" transform="translate(0.1 -126.09)"/><path d="M600.06,340.42l-56.64,137.5c10.83-13.1,19.57-25.18,29.43,5.12" transform="translate(0.1 -126.09)"/></svg></a>
-			</section>
 			<section id="vline"></section>
 			<section id="menu">
 				<ul>
@@ -49,7 +52,7 @@
 			</section>
 		</section>
 		<section id="content">
-			<section id="b-home">
+			<section id="b-home" class="block">
 				<ul>
 					<li>Pursuing</li>
 					<li>Practical,</li>
@@ -70,7 +73,7 @@
 					<section class="S4"></section>
 				</section>
 			</section>
-			<section id="b-about">
+			<section id="b-about" class="block">
 				<section id="fire-container">
 					<section id="fire-1" class="fsize"></section>
 					<section id="fire-2" class="fsize"></section>
@@ -83,7 +86,7 @@
 				My long-term mission is to use design and visual appeal in practical ways that benefit people’s life and convey emotions at the same time. All hands on deck for a better world. 
 				</p>
 			</section>
-			<section id="b-works">
+			<!--<section id="b-works">
 				<ul class="switch">
 					<li><button type="button" id="expandAll">Expand</button>&nbsp;/&nbsp;<button type="button" id="collapseAll">Collapse All</button></li>
 				</ul>
@@ -168,7 +171,7 @@
 			</section>
 			<section id="footer">
 				<p>WEBSITE BY MINH TRAN</p>
-			</section>
+			</section>-->
 		</section>
 	</section>
 	<script>
