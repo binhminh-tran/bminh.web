@@ -102,19 +102,19 @@ $(document).ready(function() {
 	$("[class^=show-").click(
 		function() { 
 			var num = $(this).attr('class').match(/\d+$/)[0];
-			$("#overlay").fadeIn(200,"linear"); 
+			$("#overlay, #close-bttn").fadeIn(200,"linear"); 
 			$("#overlay-cont-"+num).fadeIn(200,"linear"); 
-			$("#indicator").fadeOut(200,"linear"); 
+			$("#indicator, #menu-mobile").fadeOut(200,"linear"); 
 			document.body.style.overflow = "hidden";
 			overlay.scrollTop = 0;
 		}
 	);
-	$("#overlay").click(
+	$("#overlay, #close-bttn").click(
 		function() { 
-			$("#overlay, *[id^='overlay-cont-']").fadeOut(200,"linear"); 
+			$("#overlay, #close-bttn, *[id^='overlay-cont-']").fadeOut(200,"linear"); 
 			setTimeout(function(){
 				document.body.style.overflow = "auto";
-				$("#indicator").fadeIn(200,"linear");
+				$("#indicator, #menu-mobile").fadeIn(200,"linear");
 			}, 200);		 
 		}
 	);
