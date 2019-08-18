@@ -1,4 +1,4 @@
-///JavaScript Document
+// JavaScript Document
 $(document).ready(function() {
 	let vh = window.innerHeight * 0.01;
 	let vw = window.innerWidth * 0.01;
@@ -97,6 +97,25 @@ $(document).ready(function() {
 		function () {
 			var num = $(this).attr('class').match(/\d+$/)[0];
 				$("#p-"+num).fadeToggle(200,"linear");
+		}
+	);
+	$("[class^=show-").click(
+		function() { 
+			var num = $(this).attr('class').match(/\d+$/)[0];
+			$("#overlay").fadeIn(200,"linear"); 
+			$("#overlay-cont-"+num).fadeIn(200,"linear"); 
+			$("#indicator").fadeOut(200,"linear"); 
+			document.body.style.overflow = "hidden";
+			overlay.scrollTop = 0;
+		}
+	);
+	$("#overlay").click(
+		function() { 
+			$("#overlay, *[id^='overlay-cont-']").fadeOut(200,"linear"); 
+			setTimeout(function(){
+				document.body.style.overflow = "auto";
+				$("#indicator").fadeIn(200,"linear");
+			}, 200);		 
 		}
 	);
 });

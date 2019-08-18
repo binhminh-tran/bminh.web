@@ -133,7 +133,8 @@
 					<section id="p-8" class="p-atb"></section>
 					<section id="p-9" class="p-atb"></section>
 				</section>
-				<section id="overlay" class="closeOverlay">
+			</section>
+			<section id="overlay" class="closeOverlay">
 					<button type="button" id="close-bttn" class="closeOverlay"><svg id="f6121401-38e9-4282-bf29-cbb25a0bb1c2" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.11 31.11"><title>cross</title><polygon points="31.11 1.41 29.7 0 15.56 14.14 1.41 0 0 1.41 14.14 15.56 0 29.7 1.41 31.11 15.56 16.97 29.7 31.11 31.11 29.7 16.97 15.56 31.11 1.41"/></svg></button>
 					<section id="overlay-inner-container">
 						<section id="overlay-cont-1" class="overlay-atb">
@@ -163,7 +164,6 @@
 					</section>
 					<section id="overlay-contBG"></section>
 				</section>
-			</section>
 			<section id="b-contact" class="block">
 				<section id="address">
 					<p>Want to have a chat? Write me something at</p>
@@ -179,25 +179,6 @@
 		var scroll = new SmoothScroll('a[href*="#"]:not([href="#"])', {
 			speed: 600
 		});
-		$("[class^=show-").click(
-		function() { 
-			var num = $(this).attr('class').match(/\d+$/)[0];
-			$("#overlay").fadeIn(200,"linear"); 
-			$("#overlay-cont-"+num).fadeIn(200,"linear"); 
-			$("#indicator").fadeOut(200,"linear"); 
-			document.body.style.overflow = "hidden";
-			overlay.scrollTop = 0;
-		}
-	);
-	$("#overlay").click(
-		function() { 
-			 $("#overlay, *[id^='overlay-cont-']").fadeOut(200,"linear"); 
-			setTimeout(function(){
-				document.body.style.overflow = "auto";
-				$("#indicator").fadeIn(200,"linear");
-			}, 200);		 
-		}
-	);
 	</script>
 </body>
 
