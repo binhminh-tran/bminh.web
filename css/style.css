@@ -5,18 +5,15 @@ a {
 	text-decoration: none; 
 	color: inherit;
 }
-
 li {
 	list-style-type: none;
 }
-
 #wrapper {
 	margin: 0 auto;
 	clear: both;
 	overflow-x: hidden;
 	overflow-y: auto;
 }
-
 #intro-container {
 	position: fixed;
 	overflow: hidden;
@@ -27,13 +24,11 @@ li {
 	height: calc(var(--vh, 1vh) * 100);
 	
 	background-color: #000000;
-	z-index: 100;
+	z-index: 500;
 	animation: fadeOUT 1.2s 6.5s ease-in forwards;
 }
-
 #logo-anim {
 	position: absolute;
-	
 	margin: 0;
 	
   	top: 46%;
@@ -43,12 +38,11 @@ li {
 	width: 170px;
 	animation: fadeOUT 1.2s 4s ease-in forwards;
 }
-
-#intro-container H1 {
+#intro-container > H1 {
 	margin: 0;
  	position: absolute;
-  	top: 48%;
-  	left: 50%;
+  	top: 48vh;
+  	left: 50vw;
   	transform: translate(-50%, -50%);
 	opacity: 0;
 	
@@ -69,9 +63,14 @@ li {
 	left: 7vw;
 	top: calc(var(--vh, 1vh) * 5);
 	left: calc(var(--vw, 1vw) * 7);
+	z-index:400;
 }
 #logo svg {
 	height: 80px;
+}
+#menu-mobile {
+	display: none;
+	visibility: hidden;
 }
 #left_nav {
 	position: fixed;
@@ -133,19 +132,21 @@ li {
 	width: calc(var(--vw, 1vw) * 100);
 }
 
-/*------Content Block #1-------------*/
 .block {
+	position: relative;
+	display: inline-block;
 	width: calc(var(--vw, 1vw) * 100);
 	height: calc(var(--vh, 1vh) * 100);
-	overflow-x: hidden;
-	overflow-y: auto;
+	background-color: #ffffff;
+	overflow: hidden
 }
+/*------Content Block #1-------------*/
 #b-home ul {
 	position: absolute;
 	top: 17%;
 	left: 30%;
 	font-family: 'Roboto Slab', serif;
-	font-size: 6vh;
+	font-size: 3vw;
 	font-weight: 300;
 	color: #000000;
 }
@@ -168,19 +169,18 @@ li {
 }
 #koi {
 	position: absolute;
-	height: 100vh;
-	width: 75.8vh;
+	height: inherit;
+	width: inherit;
 	background-image: url('../img/KOI.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 	z-index: 1;
 	overflow-x: hidden;
-
 }
 .S1 {
 	position: absolute;
-	width: 20vh;
-	height: 20vh;
+	width: 25%;
+	height: 25%;
 	
 	top: 9%;
 	left: 15%;
@@ -194,8 +194,8 @@ li {
 }
 .S2 {
 	position: absolute;
-	width: 20vh;
-	height: 20vh;
+	width: 25%;
+	height: 25%;
 	
 	top: 17%;
 	left: 55%;
@@ -209,8 +209,8 @@ li {
 }
 .S3 {
 	position: absolute;
-	width: 22vh;
-	height: 22vh;
+	width: 25%;
+	height: 25%;
 	
 	top: 60%;
 	left: 25%;
@@ -224,8 +224,8 @@ li {
 }
 .S4 {
 	position: absolute;
-	width: 20vh;
-	height: 20vh;
+	width: 25%;
+	height: 25%;
 	
 	top: 60%;
 	left: 70%;
@@ -242,7 +242,6 @@ li {
 
 /*------Content Block #2-------------*/
 #b-about {
-	position: relative;
 	margin-top:-15vh;
 }
 #fire-container {
@@ -306,7 +305,7 @@ li {
 	width: 60%;
 	
 	font-family: 'Roboto Slab', serif;
-	font-size: 6vh;
+	font-size: 3vw;
 	font-weight: 300;
 	color: #000000;
 }
@@ -324,23 +323,89 @@ li {
 	line-height: 150%;
 	color: #000000;
 }
-
 /*------End Of Content Block #2------*/
 
-
 /*------Content Block #3-------------*/
-#b-works {
-	position: relative;
-	width: 100vw;
-	height: 100vh;
-	background-color: #ffffff;
-	overflow: hidden;
+/*------Navgoco CSS------------------*/
+button {
+	background:none;
+	border: none;
+	cursor:pointer;
 }
+button:focus {
+	outline:0;
+}
+.switch {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 17%;
+	margin-top: 10%;
+	padding: 0 0;
+}
+.switch li > button {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 0.6em;
+	font-weight: 400;
+	line-height: 150%;
+	color: #000000;
+}
+.switch button:hover {
+    text-decoration: underline;
+}
+.nav {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 2%;
+	margin-top: calc(10% - 15px);
+	padding: 0 0;
+}
+.nav > li {
+    list-style: none;
+	font-family: 'Roboto Slab', serif;
+	font-size: 3vw;
+	font-weight: 300;
+	color: #000000;
+	line-height: 90%;
+    padding: 10px 0px;
+	transition: color 0.2s ease-in-out;
+}
+.nav button {
+    display: block;
+    outline: none;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+.nav li button, .nav p {
+	text-align: left;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 1.5vh;
+	font-weight: 400;
+	color: #000000;
+    padding: 2px 0px;
+	transition: color 0.2s ease-in-out;
+}
+.nav li button {
+	line-height: 150%;
+}
+.nav li p {
+	line-height: 50%;
+}
+.nav li button:hover, .nav li:hover {
+    color: #24BAA0;
+}
+
+
+/*------End of Navgoco CSS-----------*/	
 #pframe {
-	position: absolute;
-	
-	top:18%;
-	left:60%;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 10%;
+	margin-top: 10%;
+	padding: 0 0;
 	
 	width: 30vw;
 	height: 32vw;
@@ -378,7 +443,6 @@ li {
 #p-9 {
 	background-color: cyan;
 }
-
 /*------Overlay Content--------------*/
 [aria-hidden="true"]  { display: none; }
 [aria-hidden="false"] { display: block; }
@@ -503,78 +567,6 @@ li {
 }
 /*------Overlay Scrollbar------------*/
 /*------End Of Overlay Content-------*/
-/*------Navgoco CSS------------------*/
-button {
-	background:none;
-	border: none;
-	cursor:pointer;
-}
-button:focus {
-	outline:0;
-}
-
-.switch {
-	position: absolute;
-	
-	top: 17%;
-	left: 17%;
-}
-.switch li > button {
-	font-family: 'Roboto Mono', monospace;
-	font-size: 1.2vh;
-	font-weight: 400;
-	line-height: 150%;
-	color: #000000;
-}
-.switch button:hover {
-    text-decoration: underline;
-}
-.nav {
-	position: absolute;
-	
-	top: 17%;
-	left: 29%;
-	
-	margin: 0px 0px;
-}
-.nav > li {
-    list-style: none;
-	font-family: 'Roboto Slab', serif;
-	font-size: 6vh;
-	font-weight: 300;
-	color: #000000;
-	line-height: 90%;
-    padding: 10px 0px;
-	transition: color 0.2s ease-in-out;
-}
-.nav button {
-    display: block;
-    outline: none;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-}
-.nav li button, .nav p {
-	text-align: left;
-	font-family: 'Roboto Mono', monospace;
-	font-size: 1.5vh;
-	font-weight: 400;
-	color: #000000;
-    padding: 2px 0px;
-	transition: color 0.2s ease-in-out;
-}
-.nav li button {
-	line-height: 150%;
-}
-.nav li p {
-	line-height: 50%;
-}
-.nav li button:hover, .nav li:hover {
-    color: #24BAA0;
-}
-
-
-/*------End of Navgoco CSS-----------*/
 /*------End Of Content Block #3------*/
 
 

@@ -16,7 +16,7 @@ $(document).ready(function() {
 	$(function(){
 		$('#indicator').progress({
 			// height of the progress bar
-			size:'1vh',
+			size:'1.5vh',
 			// or 'bottom'
 			position:'top',
 			// background color
