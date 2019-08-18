@@ -1,0 +1,615 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,400i|Roboto+Slab:300,400&display=swap');
+/* CSS Document */
+a {
+	text-decoration: none; 
+	color: inherit;
+}
+
+li {
+	list-style-type: none;
+}
+
+#wrapper {
+	margin: 0 auto;
+	clear: both;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+#intro-container {
+	position: fixed;
+	overflow: hidden;
+		
+	width: 100vw;
+	height: 100vh;
+	
+	background-color: #000000;
+	
+	z-index: 100;
+	
+	animation: fadeOUT 1.2s 6.5s ease-in forwards;
+}
+
+#logo-anim {
+	position: absolute;
+	
+	margin: 0;
+	
+  	top: 46%;
+  	left: 50%;
+	transform: translate(-50%, -50%);
+	
+	height: 17vh;
+	animation: fadeOUT 1.2s 4s ease-in forwards;
+}
+
+#intro-container H1 {
+	margin: 0;
+ 	position: absolute;
+  	top: 48%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+	opacity: 0;
+	
+	font-family: 'Roboto Slab', serif;
+	font-size: 1.4vh;
+	font-weight: 400;
+	letter-spacing: 3vh;
+	color: #ffffff;
+	text-align: center;
+	
+	animation: fadeIN 2s 4.5s ease-out forwards;
+}
+
+/*------Dynamic Vertical Nav Bar------*/
+#left_nav {
+	position: fixed;
+	top: 5vh;
+	left: 7vw;
+	z-index:30;
+}
+#logo svg {
+	height: 10vh;
+}
+#vline {
+	border-left: 1px solid black;
+	opacity: 0.25;
+	height: 73vh;
+	position: fixed;
+	margin-left: 10px;
+	margin-top: 10px;
+	z-index: 0;
+}
+#menu {
+	margin-left: -35px;
+	top: 60vh;
+	position: fixed;
+} 
+#menu li a {
+	float: left;
+	clear: both;
+	display: inline-block;
+	font-family: 'Roboto Slab', serif;
+	font-size: 1.2vh;
+	font-weight: 400;
+	letter-spacing: 1px;
+	padding: 0.8vh 0;
+	background-color: #ffffff;
+	z-index: 1;
+	transition: all 0.5s ease-out;
+}
+#menu li a:hover {
+	color: #24BAA0;
+}
+.extend_fx {
+	color: #24BAA0;
+	margin-bottom: 50px;
+}
+#slink {
+	position: fixed;
+	top: 91vh;
+}
+#slink svg {
+	width: 2.5vh;
+}
+#slink svg:hover {
+	fill: #24BAA0;
+}
+/*------End Of Dynamic Vertical Nav Bar------*/
+
+
+/*------Content Block #1-------------*/
+#b-home {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+#b-home ul {
+	position: absolute;
+	top: 17%;
+	left: 30%;
+	font-family: 'Roboto Slab', serif;
+	font-size: 6vh;
+	font-weight: 300;
+	color: #000000;
+}
+#b-home p {
+	position: absolute;
+	top: 75%;
+	left: 30%;
+	text-align: center;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 1.5vh;
+	font-weight: 300;
+	line-height: 200%;
+	color: #000000;
+}
+#koi-container {
+	position: absolute;
+	left: 60%;
+	height: 100vh;
+	width: 75.8vh;
+}
+#koi {
+	position: absolute;
+	height: 100vh;
+	width: 75.8vh;
+	background-image: url('../img/KOI.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	z-index: 1;
+	overflow-x: hidden;
+
+}
+.S1 {
+	position: absolute;
+	width: 20vh;
+	height: 20vh;
+	
+	top: 9%;
+	left: 15%;
+	
+	animation: float 4s ease-in-out infinite;
+	
+	background-image: url('../img/shapes-01.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	z-index: 2;
+}
+.S2 {
+	position: absolute;
+	width: 20vh;
+	height: 20vh;
+	
+	top: 17%;
+	left: 55%;
+	
+	animation: float2 5s ease-in-out infinite;
+	
+	background-image: url('../img/shapes-02.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	z-index: 0;
+}
+.S3 {
+	position: absolute;
+	width: 22vh;
+	height: 22vh;
+	
+	top: 60%;
+	left: 25%;
+	
+	animation: float2 6s ease-in-out infinite;
+		
+	background-image: url('../img/shapes-03.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	z-index: 2;
+}
+.S4 {
+	position: absolute;
+	width: 20vh;
+	height: 20vh;
+	
+	top: 60%;
+	left: 70%;
+	
+	animation: float 5s ease-in-out infinite;
+	
+	background-image: url('../img/shapes-04.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	z-index: 0;
+}
+/*------End Of Content Block #1------*/
+
+
+/*------Content Block #2-------------*/
+#b-about {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+
+	margin-top:-15vh;
+	
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+#fire-container {
+	position: absolute;
+	z-index: 0;
+	
+	top: 7%;
+	left: 20%;
+	
+	width: 47.7vh;
+	height: 90vh;
+}
+.fsize {
+	width: 47.7vh;
+	height: 90vh;
+}
+#fire-1 {
+	position: absolute;
+	z-index: 0;
+	
+	background-image: url('../img/onfire_1.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+#fire-2 {
+	position: absolute;
+	z-index: 0;
+	
+	animation: float4 4s ease-in-out infinite;
+	
+	background-image: url('../img/onfire_2.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+#fire-3 {
+	position: absolute;
+	z-index: 0;
+	
+	animation: float4 3s ease-in-out infinite;
+	
+	background-image: url('../img/onfire_3.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+#fire-4 {
+	position: absolute;
+	z-index: 0;
+	
+	animation: float5 3s ease-in-out infinite;
+	
+	background-image: url('../img/onfire_4.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+#b-about h2 {
+	position: absolute;
+	z-index: 1;
+	
+	transform: translate(40vw,20vh);
+	
+	width: 60%;
+	
+	font-family: 'Roboto Slab', serif;
+	font-size: 6vh;
+	font-weight: 300;
+	color: #000000;
+}
+#b-about p {
+	position: absolute;
+	
+	transform: translate(45vw,45vh);
+
+	width: 35vw;
+
+	text-align: left;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 1.5vh;
+	font-weight: 300;
+	line-height: 150%;
+	color: #000000;
+}
+
+/*------End Of Content Block #2------*/
+
+
+/*------Content Block #3-------------*/
+#b-works {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background-color: #ffffff;
+	overflow: hidden;
+}
+#pframe {
+	position: absolute;
+	
+	top:18%;
+	left:60%;
+	
+	width: 30vw;
+	height: 32vw;
+	}
+.p-atb {
+	position: absolute;
+	display:none;
+	width: 30vw;
+	height: 32vw;
+}
+#p-1 {
+	background-color: red;
+}
+#p-2 {
+	background-color: blue;
+}
+#p-3 {
+	background-color: green;
+}
+#p-4 {
+	background-color: yellow;
+}
+#p-5 {
+	background-color: grey;
+}
+#p-6 {
+	background-color: orange;
+}
+#p-7 {
+	background-color: pink;
+}
+#p-8 {
+	background-color: indigo;
+}
+#p-9 {
+	background-color: cyan;
+}
+
+/*------Overlay Content--------------*/
+[aria-hidden="true"]  { display: none; }
+[aria-hidden="false"] { display: block; }
+
+#close-bttn {
+	position: fixed;
+	top: 2%;
+	right: 2%;
+	width: 25px;
+	height: 25px;
+}
+#close-bttn svg {
+	fill: #ffffff;
+	transition: fill 0.2s ease;
+}
+#close-bttn:hover svg {
+	fill: #24BAA0;
+}
+#overlay {
+	position: fixed;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	top: 0; right: 0; bottom: 0; left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 200;
+}
+#overlay-inner-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 202;
+}
+#overlay-contBG{
+	position: fixed;
+	overflow: hidden;
+	width: 60vw;
+	height: 100vh;
+	background-color: white;
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+		
+	top: 50%;
+	left: 50%;
+	transform: translate(calc(-50% - 7px),-50%);
+	z-index: 201;
+}
+.overlay-atb {
+	width: 60vw;
+	height: 100vh;
+	text-align: center;
+
+}
+.overlay-atb > .column {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+}
+.c-01 {
+	width: 87%;
+	margin-top: 10%;
+	margin-bottom: 5%;
+}
+.c-02 {
+	width: 50%;
+	margin-bottom: 5%;
+}
+.c-01 h2 {
+	font-family: 'Roboto Slab', serif;
+	font-size: 3vh;
+	font-weight: 700;
+	color: #000000;
+	margin: 0 auto;
+}
+.c-01 p span { 
+    background:#ffffff; 
+    padding-right:2%; 
+}
+.c-01 p {
+	margin-top: 3%;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+	line-height: 0.1em;
+}
+.c-02 p {
+	margin: 0 auto;
+	line-height: 150%;
+}
+.column p {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 1.5vh;
+	font-weight: 300;
+	color: #000000;
+}
+.test-img {
+	position: relative;
+	display: inline-block;
+	
+	width: 87%;
+	height: 70%;
+	background-color: #E1E1E1;
+	
+	margin-bottom: 2%;
+}
+/*------Overlay Scrollbar------*/
+.overlay-atb::-webkit-scrollbar {
+   	width: 7px;
+}
+/* Track 
+.overlay-atb::-webkit-scrollbar-track {
+ 	background: none;
+}
+/* Handle 
+.overlay-atb::-webkit-scrollbar-thumb {
+ 	background: #6E6E6E;
+	border-radius: 7px;
+}
+/* Handle on hover 
+.overlay-atb::-webkit-scrollbar-thumb:hover {
+ 	background: #C0C0C0;
+}
+/*------Overlay Scrollbar------------*/
+/*------End Of Overlay Content-------*/
+/*------Navgoco CSS------------------*/
+button {
+	background:none;
+	border: none;
+	cursor:pointer;
+}
+button:focus {
+	outline:0;
+}
+
+.switch {
+	position: absolute;
+	
+	top: 17%;
+	left: 17%;
+}
+.switch li > button {
+	font-family: 'Roboto Mono', monospace;
+	font-size: 1.2vh;
+	font-weight: 400;
+	line-height: 150%;
+	color: #000000;
+}
+.switch button:hover {
+    text-decoration: underline;
+}
+.nav {
+	position: absolute;
+	
+	top: 17%;
+	left: 29%;
+	
+	margin: 0px 0px;
+}
+.nav > li {
+    list-style: none;
+	font-family: 'Roboto Slab', serif;
+	font-size: 6vh;
+	font-weight: 300;
+	color: #000000;
+	line-height: 90%;
+    padding: 10px 0px;
+	transition: color 0.2s ease-in-out;
+}
+.nav button {
+    display: block;
+    outline: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.nav li button, .nav p {
+	text-align: left;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 1.5vh;
+	font-weight: 400;
+	color: #000000;
+    padding: 2px 0px;
+	transition: color 0.2s ease-in-out;
+}
+.nav li button {
+	line-height: 150%;
+}
+.nav li p {
+	line-height: 50%;
+}
+.nav li button:hover, .nav li:hover {
+    color: #24BAA0;
+}
+
+
+/*------End of Navgoco CSS-----------*/
+/*------End Of Content Block #3------*/
+
+
+/*------Content Block #4-------------*/
+#b-contact {
+	width: 100vw;
+	height: 50vh;
+	background-color: #ffffff;
+	text-align: center;
+}
+#b-contact p {
+	position: relative;
+	margin-top: 17vh;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 1.5vh;
+	font-weight: 300;
+	color: #000000;
+}
+#b-contact a {
+	position: relative;
+	font-family: 'Roboto Slab', serif;
+	font-size: 6vh;
+	font-weight: 300;
+	color: #000000;
+	transition: color 0.2s ease-in-out;
+}
+#b-contact a:hover {
+	color: #24BAA0;
+}
+/*------End Of Content Block #4------*/
+
+
+/*------Footer-----------------------*/
+#footer {
+	text-align: center;
+	width: 100%;
+	height: 5vh;
+}
+#footer p {
+	font-family: 'Roboto Slab', serif;
+	font-size: 0.9vh;
+	font-weight: 400;
+	letter-spacing: 1px;
+	color: #000000
+}
+/*------End Of Footer----------------*/
+
