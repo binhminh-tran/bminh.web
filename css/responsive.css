@@ -59,7 +59,7 @@
 		width: 30px;
 	}
 	#slink svg:hover {
-		fill: initial;
+		fill: #000000;
 	}
 	#slink svg:active {
 		fill: #24BAA0;
