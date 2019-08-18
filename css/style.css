@@ -350,7 +350,7 @@ button:focus {
 	line-height: 150%;
 	color: #000000;
 }
-.switch button:hover {
+.switch button:focus {
     text-decoration: underline;
 }
 .nav {
