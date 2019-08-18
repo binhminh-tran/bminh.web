@@ -101,9 +101,9 @@ $(document).ready(function() {
 	$(".show-1").click(
 		function() { 
 			var num = $(this).attr('class').match(/\d+$/)[0];
-			$("#overlay").fadeIn(200,"linear"); 
-			$("#overlay-cont-1").fadeIn(200,"linear"); 
-			$("#indicator").fadeOut(200,"linear"); 
+			$("#overlay").show(); 
+			$("#overlay-cont-1").show(); 
+			$("#indicator").hide(); 
 			document.body.style.overflow = "hidden";
 			overlay.scrollTop = 0;
 		}
