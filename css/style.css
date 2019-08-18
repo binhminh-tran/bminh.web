@@ -471,7 +471,6 @@ button:focus {
 	z-index: 200;
 }
 #overlay-inner-container {
-	display: none;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -492,10 +491,10 @@ button:focus {
 	z-index: 201;
 }
 .overlay-atb {
+	display: none;
 	width: 60vw;
 	height: 100vh;
 	text-align: center;
-
 }
 .overlay-atb > .column {
 	position: relative;

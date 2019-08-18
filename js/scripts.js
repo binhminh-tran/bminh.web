@@ -98,12 +98,12 @@ $(document).ready(function() {
 				$("#p-"+num).fadeToggle(200,"linear");
 		}
 	);
-	$(".show-1").click(
+	$("[class^=show-").click(
 		function() { 
 			var num = $(this).attr('class').match(/\d+$/)[0];
-			$("#overlay").show(); 
-			$("#overlay-cont-1").show(); 
-			$("#indicator").hide(); 
+			$("#overlay").fadeIn(200,"linear"); 
+			$("#overlay-cont-"+num).fadeIn(200,"linear"); 
+			$("#indicator").fadeOut(200,"linear"); 
 			document.body.style.overflow = "hidden";
 			overlay.scrollTop = 0;
 		}
