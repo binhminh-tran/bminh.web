@@ -13,10 +13,11 @@ $(document).ready(function() {
 		document.documentElement.style.setProperty('--vh', `${vh}px`);
 		document.documentElement.style.setProperty('--vw', `${vw}px`);
 	});
+	
 	$(function(){
 		$('#indicator').progress({
 			// height of the progress bar
-			size:'1.5vh',
+			size:'1.2vh',
 			// or 'bottom'
 			position:'top',
 			// background color
@@ -96,25 +97,6 @@ $(document).ready(function() {
 		function () {
 			var num = $(this).attr('class').match(/\d+$/)[0];
 				$("#p-"+num).fadeToggle(200,"linear");
-		}
-	);
-	$(".show-1").click(
-		function() { 
-			var num = $(this).attr('class').match(/\d+$/)[0];
-			$("#overlay").fadeIn(200,"linear"); 
-			$("#overlay-cont-1").fadeIn(200,"linear"); 
-			$("#indicator").fadeOut(200,"linear"); 
-			document.body.style.overflow = "hidden";
-			overlay.scrollTop = 0;
-		}
-	);
-	$("#overlay").click(
-		function() { 
-			$("#overlay, *[id^='overlay-cont-']").fadeOut(200,"linear"); 
-			setTimeout(function(){
-				document.body.style.overflow = "auto";
-				$("#indicator").fadeIn(200,"linear");
-			}, 200);		 
 		}
 	);
 });

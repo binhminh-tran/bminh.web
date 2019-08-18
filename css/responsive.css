@@ -12,7 +12,7 @@
 	#logo {
 		top: 0;
 		left: 0;
-		background: rgb(255, 255, 255, 0.97);
+		background: rgb(255, 255, 255, 0.95);
 		border-bottom: 1px solid rgb(0, 0, 0, 0.1);
 		height: 70px;
 		width: 100vw;
@@ -181,9 +181,14 @@
 		border-bottom:1px solid rgb(0, 0, 0, 0.1);
 	}
 	#b-contact p {
+		width: 60vw;
+		width: calc(var(--vw, 1vw) * 60);
 		position: relative;
-		margin-top: 17vh;
 		font-size: 0.8em;
+		left: 50vw;
+		left: calc(var(--vw, 1vw) * 50);
+		transform: translateX(-50%);
+		margin-bottom: 20px;
 	}
 	#b-contact a {
 		font-size: 1.4em;
