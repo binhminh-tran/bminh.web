@@ -328,6 +328,9 @@ li {
 /*------End Of Content Block #2------*/
 
 /*------Content Block #3-------------*/
+#b-works {
+	z-index: 1;
+}
 /*------Navgoco CSS------------------*/
 button {
 	background:none;
@@ -575,17 +578,24 @@ button:focus {
 
 /*------Content Block #4-------------*/
 #b-contact {
-	text-align: center;
+	margin-top: -30vh;
+	z-index: 0;
 }
-#b-contact p {
+#address {
 	position: relative;
-	margin-top: 17vh;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+#address p {
+	position: relative;
 	font-family: 'Roboto Mono', monospace;
 	font-size: 1.5vh;
 	font-weight: 300;
 	color: #000000;
 }
-#b-contact a {
+#address a {
 	position: relative;
 	font-family: 'Roboto Slab', serif;
 	font-size: 6vh;
@@ -593,7 +603,7 @@ button:focus {
 	color: #000000;
 	transition: color 0.2s ease-in-out;
 }
-#b-contact a:hover {
+#address a:hover {
 	color: #24BAA0;
 }
 /*------End Of Content Block #4------*/

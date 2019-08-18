@@ -177,25 +177,26 @@
 		line-height: 1%;
 	}
 	#b-contact {
-		height: calc(var(--vh, 1vh) * 50);
+		height: calc(var(--vh, 1vh) * 80);
 		border-bottom:1px solid rgb(0, 0, 0, 0.1);
+		margin-top: 0;
+
 	}
-	#b-contact p {
+	#address p {
 		width: 60vw;
 		width: calc(var(--vw, 1vw) * 60);
-		position: relative;
 		font-size: 0.8em;
+		margin: 0 0 20px 0;
 		left: 50vw;
 		left: calc(var(--vw, 1vw) * 50);
 		transform: translateX(-50%);
-		margin-bottom: 20px;
 	}
-	#b-contact a {
+	#address a {
 		font-size: 1.4em;
-		width: 80vw;
-		width: calc(var(--vw, 1vw) * 80);
+		width: 70vw;
+		width: calc(var(--vw, 1vw) * 70);
 	}
-	#footer {
+	#address {
 		width: 100vw;
 		height: 50px;
 		width: calc(var(--vw, 1vw) * 100);
