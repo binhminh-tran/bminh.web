@@ -1,7 +1,10 @@
 // JavaScript Document
 $(document).ready(function() {
 	$("#menu-mobile").click(function(){ 
-	  		$("#wrapper").fadeOut(200,"linear"); 
+	  		$("#menu-mb-overlay").fadeToggle(200,"linear"); 
+	});
+	$("#menu-mb-overlay").click(function(){ 
+	  		$(this).fadeOut(200,"linear"); 
 	});
 	$(".nav li button").click(
 		function() { 
@@ -67,9 +70,9 @@ $(document).ready(function() {
 		animation.play(); }, 500);
 	
 	
-	var intro = document.getElementById('intro-container');
+	var intro = document.getElementById("intro-container");
 	setTimeout(function(){
-    intro.style.display = 'none';
+    	intro.style.display = 'none';
 	}, 7700); 
 	
 	$(window).scroll(function() {

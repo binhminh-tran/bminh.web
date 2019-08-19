@@ -8,6 +8,9 @@ a {
 li {
 	list-style-type: none;
 }
+html {
+	scroll-behavior: smooth;
+}
 #wrapper {
 	margin: 0 auto;
 	clear: both;
@@ -135,12 +138,17 @@ li {
 	fill: #24BAA0;
 }
 /*------End Of Dynamic Vertical Nav Bar------*/
-
+#menu-mb-overlay {
+	display: none;
+}
 #content {
 	width: 100vw;
 	width: calc(var(--vw, 1vw) * 100);
 }
-
+.anchor { 
+		padding-top: 0px; 
+		margin-top: 0px;
+}
 .block {
 	position: relative;
 	display: inline-block;
@@ -149,7 +157,7 @@ li {
 	width: calc(var(--vw, 1vw) * 100);
 	height: calc(var(--vh, 1vh) * 100);
 	background-color: #ffffff;
-	overflow: hidden
+	overflow: hidden;
 }
 /*------Content Block #1-------------*/
 #b-home ul {

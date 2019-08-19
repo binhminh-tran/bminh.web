@@ -40,6 +40,35 @@
 	#menu-mobile svg {
 		height: 20px;
 	}
+	#menu-mb-overlay {
+		display: none;
+		position: fixed;
+		background-color: white;
+		height:100vh;
+		width: 100vw;
+		width: calc(var(--vw, 1vw) * 100);
+		z-index: 399;
+	}
+	.anchor { 
+		padding-top: 70px; 
+		margin-top:-70px;
+	}
+	#menu-mb-overlay ul {
+		position: relative;
+		padding: 0 0;
+		margin: 0 0;
+		padding-top: 70px;
+		top: 50%;
+		transform: translateY(-50%)
+	}
+	#menu-mb-overlay ul > li {
+		font-family: 'Roboto Slab', serif;
+		font-size: 1.7em;
+		font-weight: 300;
+		color: #000000;
+		text-align: center;
+		line-height: 2.5em;
+	}
 	#left_nav {
 		top: 3vh;
 		left: 3vw;
@@ -90,7 +119,7 @@
 		position: relative;
 		display: inline-block;
 		top: initial;
-		width: 80%;
+		width: 87%;
 		padding: 80px 0 0 0;
 		left: 50vw;
 		left: calc(var(--vw, 1vw) * 50);
@@ -102,7 +131,7 @@
 		display: inline-block;
 		top: initial;
 		left: initial;
-		width: 80%;
+		width: 87%;
 		left: 50vw;
 		left: calc(var(--vw, 1vw) * 50);
 		transform: translateX(-50%);
@@ -121,7 +150,7 @@
 		display: inline-block;
 		transform: initial;
 		
-		width: 80%;
+		width: 87%;
 		left: 50vw;
 		left: calc(var(--vw, 1vw) * 50);
 		transform: translateX(-50%);
@@ -132,7 +161,7 @@
 		display: inline-block;
 		transform: initial;
 
-		width: 80%;
+		width: 87%;
 		left: 50vw;
 		left: calc(var(--vw, 1vw) * 50);
 		transform: translateX(-50%);
@@ -153,8 +182,7 @@
 		margin-left: initial;
 		margin-top: 20px;
 		padding: 0 0 15px 0;
-		width: 80vw;
-		width: calc(var(--vw, 1vw) * 80);
+		width: 87%;
 		left: 50vw;
 		left: calc(var(--vw, 1vw) * 50);
 		transform: translateX(-50%);
@@ -183,7 +211,7 @@
 		float: right;
 		font-size: 16px;
 		font-weight: bolder;
-		color: #EBEBEB;
+		color: #DBDBDB;
 	}
 
 	.nav li > a > span:after {
@@ -246,12 +274,12 @@
 		text-align: left;
 	}
 	.c-01 {
-		width: 80%;
+		width: 87%;
 		margin-top: 10%;
 		margin-bottom: 5%;
 	}
 	.c-02 {
-		width: 80%;
+		width: 87%;
 		margin-bottom: 7%;
 	}
 	.c-01 h2 {
