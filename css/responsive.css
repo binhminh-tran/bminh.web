@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
+
 @media only screen and (max-width: 768px) {
 	#indicator {
 		visibility: hidden;
@@ -189,8 +190,8 @@
 		content: '\25be';
 	}
 	.nav li.open > a > span:after {
-		content: '\25b4';
-		font-size: 19px;
+		content: '\25be';
+		/*content: '\25b4';*/
 	}
 	#b-contact {
 		height: calc(var(--vh, 1vh) * 80);
