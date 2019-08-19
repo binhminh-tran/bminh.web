@@ -187,11 +187,10 @@
 	}
 
 	.nav li > a > span:after {
-		content: '\25be';
+		content: "\25be";
 	}
 	.nav li.open > a > span:after {
-		content: '\25be';
-		/*content: '\25b4';*/
+		content: "\25b4";
 	}
 	#b-contact {
 		height: calc(var(--vh, 1vh) * 80);
