@@ -467,7 +467,7 @@ button:focus {
 }
 #close-bttn svg {
 	height: 22px;
-	fill: #ffffff;
+	fill: #565656;
 	transition: fill 0.2s ease;
 }
 #close-bttn:hover svg {
@@ -496,8 +496,8 @@ button:focus {
 #overlay-contBG{
 	position: fixed;
 	overflow: hidden;
-	width: 60vw;
-	width: calc(var(--vw, 1vw) * 60);
+	width: 73vw;
+	width: calc(var(--vw, 1vw) * 73);
 	height: 100vh;
 	height: calc(var(--vh, 1vh) * 100);
 	background-color: white;
@@ -510,8 +510,8 @@ button:focus {
 }
 .overlay-atb {
 	display: none;
-	width: 60vw;
-	width: calc(var(--vw, 1vw) * 60);
+	width: 73vw;
+	width: calc(var(--vw, 1vw) * 73);
 	height: 100vh;
 	height: calc(var(--vh, 1vh) * 100);
 	text-align: center;

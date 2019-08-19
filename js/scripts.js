@@ -1,26 +1,27 @@
 // JavaScript Document
 $(document).ready(function() {
-		$("#menu-mobile").click(function(){ 
+	$("#menu-mobile").click(function(){ 
 	  		$("#wrapper").fadeOut(200,"linear"); 
-		});
-		$(".show-1").click(function() { 
-				var num = $(this).attr('class').match(/\d+$/)[0];
-				$("#overlay, #close-bttn").fadeIn(200,"linear"); 
-				$("#overlay-cont-1").fadeIn(200,"linear"); 
-				$("#indicator, #menu-mobile").fadeOut(200,"linear"); 
-				document.body.style.overflow = "hidden";
-				overlay.scrollTop = 0;
-			}
-		);
-		$("#overlay, #close-bttn").click(
-			function() { 
-				$("#overlay, #close-bttn, *[id^='overlay-cont-']").fadeOut(200,"linear"); 
-				setTimeout(function(){
-					document.body.style.overflow = "auto";
-					$("#indicator, #menu-mobile").fadeIn(200,"linear");
-				}, 200);		 
-			}
-		);
+	});
+	$("[class^=show-").click(
+		function() { 
+			var i = $(this).attr('class').match(/\d+$/)[0];
+			$("#overlay, #close-bttn").fadeIn(200,"linear"); 
+			$("#overlay-cont-"+i).fadeIn(200,"linear"); 
+			$("#indicator, #menu-mobile").fadeOut(200,"linear"); 
+			document.body.style.overflow = "hidden";
+			overlay.scrollTop = 0;
+		}
+	);
+	$("#overlay, #close-bttn").click(
+		function() { 
+			$("#overlay, #close-bttn, *[id^='overlay-cont-']").fadeOut(200,"linear"); 
+			setTimeout(function(){
+				document.body.style.overflow = "auto";
+				$("#indicator, #menu-mobile").fadeIn(200,"linear");
+			}, 200);		 
+		}
+	);
 	let vh = window.innerHeight * 0.01;
 	let vw = window.innerWidth * 0.01;
 	// Then we set the value in the --vh custom property to the root of the document
