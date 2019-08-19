@@ -176,17 +176,33 @@
 	.nav li p {
 		line-height: 1%;
 	}
+	.nav li > a > span {
+		float: right;
+		font-size: 19px;
+		font-weight: bolder;
+		color: #C8C8C8;
+	}
+
+	.nav li > a > span:after {
+		content: '\25be';
+	}
+	.nav li.open > a > span:after {
+		content: '\25b4';
+	}
 	#b-contact {
 		height: calc(var(--vh, 1vh) * 80);
 		border-bottom:1px solid rgb(0, 0, 0, 0.1);
 		margin-top: 0;
-
 	}
 	#address p {
-		width: 60vw;
+		width: 70vw;
 		width: calc(var(--vw, 1vw) * 60);
+		
 		font-size: 0.8em;
+		line-height: 1.5em;
+		
 		margin: 0 0 20px 0;
+		
 		left: 50vw;
 		left: calc(var(--vw, 1vw) * 50);
 		transform: translateX(-50%);
