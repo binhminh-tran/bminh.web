@@ -1,6 +1,5 @@
 @charset "utf-8";
 /* CSS Document */
-
 @media only screen and (max-width: 768px) {
 	#indicator {
 		visibility: hidden;
