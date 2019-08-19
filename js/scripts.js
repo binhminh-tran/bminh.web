@@ -1,5 +1,24 @@
 // JavaScript Document
 $(document).ready(function() {
+	$("[class^=show-").click(
+		function() { 
+			var num = $(this).attr('class').match(/\d+$/)[0];
+			$("#overlay, #close-bttn").fadeIn(200,"linear"); 
+			$("#overlay-cont-"+num).fadeIn(200,"linear"); 
+			$("#indicator, #menu-mobile").fadeOut(200,"linear"); 
+			document.body.style.overflow = "hidden";
+			overlay.scrollTop = 0;
+		}
+	);
+	$("#overlay, #close-bttn").click(
+		function() { 
+			$("#overlay, #close-bttn, *[id^='overlay-cont-']").fadeOut(200,"linear"); 
+			setTimeout(function(){
+				document.body.style.overflow = "auto";
+				$("#indicator, #menu-mobile").fadeIn(200,"linear");
+			}, 200);		 
+		}
+	);
 	let vh = window.innerHeight * 0.01;
 	let vw = window.innerWidth * 0.01;
 	// Then we set the value in the --vh custom property to the root of the document
@@ -13,6 +32,7 @@ $(document).ready(function() {
 		document.documentElement.style.setProperty('--vh', `${vh}px`);
 		document.documentElement.style.setProperty('--vw', `${vw}px`);
 	});
+	
 	
 	$(function(){
 		$('#indicator').progress({
@@ -97,28 +117,6 @@ $(document).ready(function() {
 		function () {
 			var num = $(this).attr('class').match(/\d+$/)[0];
 				$("#p-"+num).fadeToggle(200,"linear");
-		}
-	);
-	$("#menu-mobile").click(function(){ //When you click the element with hide id//
-	  $("#wrapper").fadeOut(200,"linear"); //all the paragraphs will be hidden//
-	});
-	$("[class^=show-").click(
-		function() { 
-			var num = $(this).attr('class').match(/\d+$/)[0];
-			$("#overlay, #close-bttn").fadeIn(200,"linear"); 
-			$("#overlay-cont-"+num).fadeIn(200,"linear"); 
-			$("#indicator, #menu-mobile").fadeOut(200,"linear"); 
-			document.body.style.overflow = "hidden";
-			overlay.scrollTop = 0;
-		}
-	);
-	$("#overlay, #close-bttn").click(
-		function() { 
-			$("#overlay, #close-bttn, *[id^='overlay-cont-']").fadeOut(200,"linear"); 
-			setTimeout(function(){
-				document.body.style.overflow = "auto";
-				$("#indicator, #menu-mobile").fadeIn(200,"linear");
-			}, 200);		 
 		}
 	);
 });
