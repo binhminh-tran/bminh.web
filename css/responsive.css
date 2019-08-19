@@ -181,9 +181,9 @@
 	}
 	.nav li > a > span {
 		float: right;
-		font-size: 19px;
+		font-size: 16px;
 		font-weight: bolder;
-		color: #DFDFDF;
+		color: #EBEBEB;
 	}
 
 	.nav li > a > span:after {
