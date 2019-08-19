@@ -49,16 +49,13 @@
 		width: calc(var(--vw, 1vw) * 100);
 		z-index: 399;
 	}
-	.anchor { 
-		padding-top: 70px; 
-		margin-top:-70px;
-	}
+	
 	#menu-mb-overlay ul {
 		position: relative;
 		padding: 0 0;
 		margin: 0 0;
 		padding-top: 70px;
-		top: 50%;
+		top: 45%;
 		transform: translateY(-50%)
 	}
 	#menu-mb-overlay ul > li {
