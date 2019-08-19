@@ -4,7 +4,7 @@
 @media only screen and (max-width: 768px) {
 	#indicator {
 		visibility: hidden;
-		display: none
+		display: none;
 	}
 	#logo-anim {	
 		width: 130px;
@@ -49,7 +49,10 @@
 		width: calc(var(--vw, 1vw) * 100);
 		z-index: 399;
 	}
-	
+	.anchor {
+		padding-top: 70px;
+		margin-top:-70px;
+	}
 	#menu-mb-overlay ul {
 		position: relative;
 		padding: 0 0;
@@ -117,7 +120,8 @@
 		display: inline-block;
 		top: initial;
 		width: 87%;
-		padding: 80px 0 0 0;
+		padding: 100px 0 40px 0;
+		margin: 0 0;
 		left: 50vw;
 		left: calc(var(--vw, 1vw) * 50);
 		transform: translateX(-50%);
@@ -136,7 +140,7 @@
 		line-height: 1.5em;
 	}
 	#b-about {
-		margin-top:initial;
+		border-bottom:1px solid rgb(0, 0, 0, 0.1);
 	}
 	#fire-container {
 		visibility: hidden;
@@ -169,7 +173,6 @@
 	}
 	#b-works {
 		border-bottom:1px solid rgb(0, 0, 0, 0.1);
-		border-top: 1px solid rgb(0, 0, 0, 0.1);
 	}
 	.switch, #pframe {
 		display: none;
@@ -323,7 +326,6 @@
 	#close-bttn:hover svg {
 		fill: #000000;
 	}
-	
 }
 	/*#menu li a {
 		font-size: 0.5em;

@@ -159,6 +159,20 @@ html {
 	background-color: #ffffff;
 	overflow: hidden;
 }
+#b-home {
+	z-index: 5;
+}
+#b-about {
+	margin-top:-15vh;
+	z-index: 4;
+}
+#b-works {
+	z-index: 3;
+}
+#b-contact {
+	margin-top: -30vh;
+	z-index: 2;
+}
 /*------Content Block #1-------------*/
 #b-home ul {
 	position: absolute;
@@ -260,9 +274,6 @@ html {
 
 
 /*------Content Block #2-------------*/
-#b-about {
-	margin-top:-15vh;
-}
 #fire-container {
 	position: absolute;
 	z-index: 0;
@@ -345,9 +356,6 @@ html {
 /*------End Of Content Block #2------*/
 
 /*------Content Block #3-------------*/
-#b-works {
-	z-index: 1;
-}
 /*------Navgoco CSS------------------*/
 button {
 	background:none;
@@ -600,10 +608,6 @@ button:focus {
 
 
 /*------Content Block #4-------------*/
-#b-contact {
-	margin-top: -30vh;
-	z-index: 0;
-}
 #address {
 	position: relative;
 	text-align: center;
