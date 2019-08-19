@@ -1,5 +1,8 @@
 // JavaScript Document
 $(document).ready(function() {
+	$("#menu-mobile").click(function(){ //When you click the element with hide id//
+	  $("#wrapper").fadeOut(200,"linear"); //all the paragraphs will be hidden//
+	});
 	let vh = window.innerHeight * 0.01;
 	let vw = window.innerWidth * 0.01;
 	// Then we set the value in the --vh custom property to the root of the document
@@ -99,9 +102,6 @@ $(document).ready(function() {
 				$("#p-"+num).fadeToggle(200,"linear");
 		}
 	);
-	$("#menu-mobile").click(function(){ //When you click the element with hide id//
-	  $("#wrapper").fadeOut(200,"linear"); //all the paragraphs will be hidden//
-	});
 	$("[class^=show-").click(
 		function() { 
 			var num = $(this).attr('class').match(/\d+$/)[0];
