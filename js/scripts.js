@@ -3,7 +3,7 @@ $(document).ready(function() {
 	$("#menu-mobile").click(function(){ 
 	  		$("#wrapper").fadeOut(200,"linear"); 
 	});
-	$("[class^=show-").click(
+	$(".nav li button").click(
 		function() { 
 			var i = $(this).attr('class').match(/\d+$/)[0];
 			$("#overlay, #close-bttn").fadeIn(200,"linear"); 
@@ -22,6 +22,7 @@ $(document).ready(function() {
 			}, 200);		 
 		}
 	);
+	
 	let vh = window.innerHeight * 0.01;
 	let vw = window.innerWidth * 0.01;
 	// Then we set the value in the --vh custom property to the root of the document
