@@ -9,6 +9,9 @@
 	#logo-anim {	
 		width: 130px;
 	}
+	#myName > h1 {
+		font-size: 4vw;
+	}
 	#logo {
 		top: 0;
 		left: 0;
@@ -180,7 +183,7 @@
 		float: right;
 		font-size: 19px;
 		font-weight: bolder;
-		color: #C8C8C8;
+		color: #DFDFDF;
 	}
 
 	.nav li > a > span:after {
@@ -188,6 +191,7 @@
 	}
 	.nav li.open > a > span:after {
 		content: '\25b4';
+		font-size: 19px;
 	}
 	#b-contact {
 		height: calc(var(--vh, 1vh) * 80);
