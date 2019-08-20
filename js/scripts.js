@@ -29,7 +29,16 @@ $(document).ready(function() {
 			}, 200);		 
 		}
 	);
-	
+	$("a").click(function(e){
+		e.preventDefault();
+		$('html, body').animate({
+			scrollTop: $( $(this).attr('href') ).offset().top
+		}, 500);
+	});
+	/*$(".a1").click(function() {$("#b-home").scrollIntoView(); });
+	$(".a2").click(function() {$("#b-about").scrollIntoView(); });
+	$(".a3").click(function() {$("#b-works").scrollIntoView(); });
+	$(".a4").click(function() {$("#b-contact").scrollIntoView(); });*/
 	let vh = window.innerHeight * 0.01;
 	let vw = window.innerWidth * 0.01;
 	// Then we set the value in the --vh custom property to the root of the document
@@ -85,7 +94,7 @@ $(document).ready(function() {
 		var offsetB3 = $('#b-works').offset().top;
 		var offsetB4 = $('#b-contact').offset().top;
 		var scroll_d = $(document).scrollTop()
-		if (scroll_d > offsetB1*2/3) {
+		if (scroll_d >= offsetB1) {
 			$(".a1").addClass("extend_fx");
 			$(".a2,.a3,.a4").removeClass("extend_fx");
 		}
@@ -147,7 +156,7 @@ $(document).ready(function() {
         $(".nav").navgoco('toggle', true);
     });
 	
-	$("[class^=show-").hover(
+	$(".nav li button").hover(
 		function () {
 			var num = $(this).attr('class').match(/\d+$/)[0];
 				$("#p-"+num).fadeToggle(200,"linear");

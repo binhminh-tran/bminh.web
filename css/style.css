@@ -8,9 +8,9 @@ a {
 li {
 	list-style-type: none;
 }
-html {
+/*html {
 	scroll-behavior: smooth;
-}
+} */
 #indicator {
 	opacity: 0;
 	animation: fadeIN 1.2s 6.5s ease-in forwards;
