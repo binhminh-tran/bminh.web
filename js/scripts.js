@@ -1,16 +1,25 @@
 // JavaScript Document
 $(document).ready(function() {
+	/* SMOOTH SCROLL MOBILE */
 	document.addEventListener("touchstart", function() {}, true);
 	
-	$("#menu-mobile").click(function(){ 
+	/* OPEN MENU MOBILE */
+	$("#menu-mobile").click(
+		function(){ 
 	  		$("#menu-mb-overlay, #overlay-container").fadeToggle(200,"linear");
 			$("#overlay-container").removeClass("closeOverlay");
-	});
-	$("#menu-mb-overlay").click(function(){ 
+		}
+	);
+	
+	/* CLOSE MENU MOBILE */
+	$("#menu-mb-overlay").click(
+		function(){ 
 	  		$("#menu-mb-overlay, #overlay-container").fadeOut(200,"linear");
 			$("#overlay-container").addClass("closeOverlay");
-	});
+	}
+	);
 	
+	/* OPEN OVERLAY */
 	$(".nav li button").click(
 		function() { 
 			var i = $(this).attr('class').match(/\d+$/)[0];
@@ -18,8 +27,11 @@ $(document).ready(function() {
 			$("#overlay-content-"+i).fadeIn(200,"linear"); 
 			$("#indicator, #menu-mobile").fadeOut(200,"linear"); 
 			document.body.style.overflow = "hidden";
-		}
+		
+	}
 	);
+	
+	/* CLOSE OVERLAY */
 	$(".closeOverlay").click(
 		function() { 
 			$(".closeOverlay, *[id^='overlay-content-']").fadeOut(200,"linear"); 
@@ -29,16 +41,18 @@ $(document).ready(function() {
 			}, 200);		 
 		}
 	);
-	$("a").click(function(e){
+	
+	/* SCROLL TO BLOCK */
+	$("#menu > ul > li > a").click(
+		function(e){
 		e.preventDefault();
 		$('html, body').animate({
 			scrollTop: $( $(this).attr('href') ).offset().top
 		}, 500);
-	});
-	/*$(".a1").click(function() {$("#b-home").scrollIntoView(); });
-	$(".a2").click(function() {$("#b-about").scrollIntoView(); });
-	$(".a3").click(function() {$("#b-works").scrollIntoView(); });
-	$(".a4").click(function() {$("#b-contact").scrollIntoView(); });*/
+	}
+	);
+	
+	/* GET VW VH UNIT */
 	let vh = window.innerHeight * 0.01;
 	let vw = window.innerWidth * 0.01;
 	// Then we set the value in the --vh custom property to the root of the document
@@ -53,7 +67,7 @@ $(document).ready(function() {
 		document.documentElement.style.setProperty('--vw', `${vw}px`);
 	});
 	
-	
+	/* INDICATOR OPTIONS */
 	$(function(){
 		$('#indicator').progress({
 			// height of the progress bar
@@ -69,25 +83,27 @@ $(document).ready(function() {
 		});
 	});	
 	
-	var animation = lottie.loadAnimation({
+	/* LOTTIE OPTIONS */
+	var animation = lottie.loadAnimation(
+		{
 		container: document.getElementById('logo-anim'),
 		renderer: 'svg',
 		loop: false,
 		autoplay: false,
 		path: 'https://assets1.lottiefiles.com/packages/lf20_7uKjju.json',
-	});
-	
+	}
+	);
 	lottie.setSpeed(1.5);
-	
 	setTimeout(function(){ 
 		animation.play(); }, 500);
 	
-	
+	/* HIDE INTRO */
 	var intro = document.getElementById("intro-container");
 	setTimeout(function(){
     	intro.style.display = 'none';
 	}, 7700); 
 	
+	/* MENU SCROLL CHANGE */
 	$(window).scroll(function() {
 		var offsetB1 = $('#b-home').offset().top;
 		var offsetB2 = $('#b-about').offset().top;
@@ -131,6 +147,7 @@ $(document).ready(function() {
 		}*/
 	}); 
 	
+	/* NAVGOCO */
 	$('.nav').navgoco({
 			caretHtml: '<i class="some-random-icon-class"></i>',
 			accordion: false,
@@ -147,6 +164,7 @@ $(document).ready(function() {
 			}
 	});
 	
+	/* NAVGOCO SWITCH */
 	$("#collapseAll").click(function(e) {
         e.preventDefault();
         $(".nav").navgoco('toggle', false);
@@ -156,6 +174,7 @@ $(document).ready(function() {
         $(".nav").navgoco('toggle', true);
     });
 	
+	/* SHOW PROJECT PREVIEW */
 	$(".nav li button").hover(
 		function () {
 			var num = $(this).attr('class').match(/\d+$/)[0];
