@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 414px) {
 	#indicator {
 		visibility: hidden;
 		display: none;
@@ -37,7 +37,7 @@
 		top: 25px;
 		right: 20px;
 	}
-	#menu-mobile svg {
+	#menu-mobile > svg {
 		height: 20px;
 	}
 	#menu-mb-overlay {
@@ -103,6 +103,19 @@
 	.block {
 		height: auto;
 		overflow: hidden;
+	}
+	#b-home {
+		z-index: 4;
+	}
+	#b-about {
+		z-index: 3;
+	}
+	#b-works {
+		z-index: 2;
+	}
+	#b-contact {
+		margin-top: -30vh;
+		z-index: 1;
 	}
 	#koi-container {
 		position: relative;
@@ -244,9 +257,8 @@
 		width: calc(var(--vw, 1vw) * 70);
 	}
 	#address {
-		top: 45%;
+		top: 40%;
 		width: 100vw;
-		height: 50px;
 		width: calc(var(--vw, 1vw) * 100);
 	}
 	#footer p {
@@ -255,17 +267,13 @@
 		letter-spacing: 1px;
 		top: 20%;
 	}
-	.overlay-atb, #overlay-contBG {
+	.overlay-atb {
 		width: 100vw;
 		width: calc(var(--vw, 1vw) * 100);
 		height: 100vh;
 		height: calc(var(--vh, 1vh) * 100);
-		padding-right:15px;
-	}
-	.overlay-atb {
-		margin-top: 40%;
-		margin-right:-15px;
-		margin-left: 0;
+		padding-top: 70px;
+		background-color: #ffffff;
 	}
 	.overlay-atb > .column {
 		position: relative;
@@ -282,32 +290,30 @@
 		width: 87%;
 		margin-bottom: 7%;
 	}
-	.c-01 h2 {
+	.column h2 {
 		font-size: 1.5em;
+		color: #000000;
 	}
-	.c-01 p span { 
-		background:#ffffff; 
-		padding-right:2%; 
+	.column p {
+		font-size: 0.8em;
+		color: #000000;
 	}
 	.c-01 p {
 		margin-top: 7%;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+	}
+	.c-01 p span { 
+		background: #ffffff; 
 	}
 	.c-02 p {
 		margin: 0 auto;
 		line-height: 150%;
 	}
-	.column p {
-		font-size: 0.8em;
-		font-height: 1.4em;
-	}
 	.test-img {
 		position: relative;
 		display: inline-block;
 
-		width: 100vw;
-		height: 70vh;
-		width: calc(var(--vw, 1vw) * 100);
-		height: calc(var(--vh, 1vh) * 70);
+		width: 94%;
 		background-color: #E1E1E1;
 
 		margin-bottom: 2%;
@@ -327,12 +333,93 @@
 		fill: #000000;
 	}
 }
-	/*#menu li a {
-		font-size: 0.5em;
-		padding: 3px 0;
+@media only screen and (max-width: 768px) {
+}
+@media only screen and (max-width: 1366px) and (min-width: 415px) {
+	#left_nav, #logo {
+		left: 3vw;
+		left: calc(var(--vw, 1vw) * 3);
 	}
-	.extend_fx {
-		color: #24BAA0;
-		margin-bottom: 0px;
-	}*/
+	#slink svg {
+		width: 33px;
+		margin-right: 3px;
+	}
+	#b-home p {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	#koi-container {
+		left: 53%;
+	}
+	#fire-container {
+		left: 15%;
+	}
+	.fsize {
+		width: 42.1vh;
+		height: 80vh;
+	}
+	#b-about h2 {
+		width: 60%;
+		left: 35%;
+		font-size: 4vw;
+	}
+	#b-about p {
+		top: 40%;
+		left: initial;
+		right: 7%;
+		width: 45%;
+	}
+	#pframe {
+		display: none;
+		visibility: hidden;
+	}
+	.switch {
+		display: none;
+	}
+	.nav {
+		position: absolute;
+		display: block;
+		margin-left: initial;
+		margin-top: initial;
+		top:50%;
+		left:50%;
+		transform: translate(-50%,-50%);
+		text-align: center;
+	}
+	.nav > li {
+		font-size: 6vh;
+		line-height: 110%;
+		padding: 10px 0px;
+	}
+	.nav ul{ 
+		padding: 0 0;
+		text-align: center;
+	}
+	.nav li button, .nav p {
+		font-size: 1.7vh;
+		padding: 2px 0px;
+		text-align: center;
+	} 
+	.nav li button {
+		line-height: 150%;
+		width: 100%;
+	}
+	#close-bttn {
+		top: 15px;
+		right: 15px;
+
+	}
+	#close-bttn svg {
+		height: 18px;
+		fill: #565656;
+		transition: fill 0.2s ease;
+	}
+	#close-bttn:hover svg {
+		fill: #565656;
+	}
+	.overlay-atb {
+		width: 85vw;
+		width: calc(var(--vw, 1vw) * 85);
+	}
 	
+}

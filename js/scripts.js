@@ -9,16 +9,15 @@ $(document).ready(function() {
 	$(".nav li button").click(
 		function() { 
 			var i = $(this).attr('class').match(/\d+$/)[0];
-			$("#overlay, #close-bttn").fadeIn(200,"linear"); 
-			$("#overlay-cont-"+i).fadeIn(200,"linear"); 
+			$("#overlay-container, #close-bttn").fadeIn(200,"linear"); 
+			$("#overlay-content-"+i).fadeIn(200,"linear"); 
 			$("#indicator, #menu-mobile").fadeOut(200,"linear"); 
 			document.body.style.overflow = "hidden";
-			overlay.scrollTop = 0;
 		}
 	);
-	$("#overlay, #close-bttn").click(
+	$(".closeOverlay").click(
 		function() { 
-			$("#overlay, #close-bttn, *[id^='overlay-cont-']").fadeOut(200,"linear"); 
+			$(".closeOverlay, *[id^='overlay-content-']").fadeOut(200,"linear"); 
 			setTimeout(function(){
 				document.body.style.overflow = "auto";
 				$("#indicator, #menu-mobile").fadeIn(200,"linear");
