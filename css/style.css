@@ -376,7 +376,7 @@ button:focus {
 }
 .switch li > button {
 	font-family: 'Roboto Mono', monospace;
-	font-size: 0.6em;
+	font-size: 1.5vh;
 	font-weight: 400;
 	line-height: 150%;
 	color: #000000;
@@ -436,10 +436,7 @@ button:focus {
 	margin-left: 10%;
 	margin-top: 10%;
 	padding: 0 0;
-	
-	width: 30vw;
-	height: 32vw;
-	}
+}
 .p-atb {
 	position: absolute;
 	display:none;
