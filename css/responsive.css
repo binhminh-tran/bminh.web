@@ -717,7 +717,8 @@
 		width: calc(var(--vw, 1vw) * 40);
 		z-index: 399;
 		right: 0;
-		border-left: 1px solid rgb(0, 0, 0, 0.1);;
+		border-left: 1px solid rgb(0, 0, 0, 0.1);
+		margin-top: 90px;
 	}
 	#close-bttn {
 		top: 35px;
@@ -739,7 +740,7 @@
 		position: relative;
 		padding: 0 0;
 		margin: 0 0;
-		padding-top: 70px;
+		margin-top: -20px;
 		top: 45%;
 		transform: translateY(-50%)
 	}

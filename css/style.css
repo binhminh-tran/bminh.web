@@ -145,6 +145,9 @@ li {
 #menu-mb-overlay {
 	display: none;
 }
+#menu-mb-overlay ul > li > a {
+	padding: 10px;
+}
 #content {
 	width: 100vw;
 	width: calc(var(--vw, 1vw) * 100);
