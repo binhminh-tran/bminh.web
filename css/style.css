@@ -12,7 +12,8 @@ html {
 	scroll-behavior: smooth;
 }
 #indicator {
-	display: none;
+	opacity: 0;
+	animation: fadeIN 1.2s 6.5s ease-in forwards;
 }
 #wrapper {
 	margin: 0 auto;
@@ -401,6 +402,9 @@ button:focus {
     padding: 10px 0px;
 	transition: color 0.2s ease-in-out;
 }
+.nav li > ul {
+	margin-top: 10%;
+}
 .nav button {
     display: block;
     outline: none;
@@ -408,7 +412,7 @@ button:focus {
     -moz-border-radius: 0px;
     border-radius: 0px;
 }
-.nav li button, .nav p {
+.nav li button {
 	text-align: left;
 	font-family: 'Roboto Mono', monospace;
 	font-size: 1.5vh;
@@ -419,10 +423,7 @@ button:focus {
 }
 .nav li button {
 	line-height: 150%;
-}
-.nav li p {
-	line-height: 50%;
-}
+}}
 .nav li button:hover, .nav li:hover {
     color: #24BAA0;
 }
@@ -472,8 +473,8 @@ button:focus {
 #p-9 {
 	background-color: cyan;
 }
-/*------Overlay Content--------------*/
 
+/*------Overlay Content--------------*/
 #close-bttn {
 	position: fixed;
 	top: 15px;

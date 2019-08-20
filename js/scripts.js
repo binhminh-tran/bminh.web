@@ -1,11 +1,16 @@
 // JavaScript Document
 $(document).ready(function() {
+	document.addEventListener("touchstart", function() {}, true);
+	
 	$("#menu-mobile").click(function(){ 
-	  		$("#menu-mb-overlay").fadeToggle(200,"linear"); 
+	  		$("#menu-mb-overlay, #overlay-container").fadeToggle(200,"linear");
+			$("#overlay-container").removeClass("closeOverlay");
 	});
 	$("#menu-mb-overlay").click(function(){ 
-	  		$(this).fadeOut(200,"linear"); 
+	  		$("#menu-mb-overlay, #overlay-container").fadeOut(200,"linear");
+			$("#overlay-container").addClass("closeOverlay");
 	});
+	
 	$(".nav li button").click(
 		function() { 
 			var i = $(this).attr('class').match(/\d+$/)[0];
@@ -72,10 +77,31 @@ $(document).ready(function() {
 	var intro = document.getElementById("intro-container");
 	setTimeout(function(){
     	intro.style.display = 'none';
-		$("#indicator").fadeIn(200,"linear");
 	}, 7700); 
 	
 	$(window).scroll(function() {
+		var offsetB1 = $('#b-home').offset().top;
+		var offsetB2 = $('#b-about').offset().top;
+		var offsetB3 = $('#b-works').offset().top;
+		var offsetB4 = $('#b-contact').offset().top;
+		var scroll_d = $(document).scrollTop()
+		if (scroll_d > offsetB1*2/3) {
+			$(".a1").addClass("extend_fx");
+			$(".a2,.a3,.a4").removeClass("extend_fx");
+		}
+		if (scroll_d > offsetB2*3/4) {
+			$(".a2").addClass("extend_fx");
+			$(".a1,.a3,.a4").removeClass("extend_fx");
+		}
+		if (scroll_d > offsetB3*4/5) {
+			$(".a3").addClass("extend_fx");
+			$(".a1,.a2,.a4").removeClass("extend_fx");
+		}
+		if (scroll_d > offsetB4*5/6) {
+			$(".a4").addClass("extend_fx");
+			$(".a1,.a2,.a3").removeClass("extend_fx");
+		}
+		/* OLD SCROLL CODE
 		var windowHeight = $(window).height();
 		var scroll_d = $(document).scrollTop()
 		if (scroll_d < windowHeight*2/3) {
@@ -93,8 +119,8 @@ $(document).ready(function() {
 		if (windowHeight*2.46 < scroll_d && scroll_d < windowHeight*3.46){
 			$(".a4").addClass("extend_fx");
 			$(".a1,.a2,.a3").removeClass("extend_fx");
-		}
-	});
+		}*/
+	}); 
 	
 	$('.nav').navgoco({
 			caretHtml: '<i class="some-random-icon-class"></i>',
@@ -110,7 +136,8 @@ $(document).ready(function() {
 				duration: 400,
 				easing: 'swing'
 			}
-		});
+	});
+	
 	$("#collapseAll").click(function(e) {
         e.preventDefault();
         $(".nav").navgoco('toggle', false);
