@@ -43,7 +43,7 @@ $(document).ready(function() {
 	);
 	
 	/* SCROLL TO BLOCK */
-	$("#menu > ul > li > a").click(
+	$("#menu > ul > li > a, #menu-mb-overlay > ul > li > a").click(
 		function(e){
 		e.preventDefault();
 		$('html, body').animate({
