@@ -11,6 +11,9 @@ li {
 html {
 	scroll-behavior: smooth;
 }
+#indicator {
+	display: none;
+}
 #wrapper {
 	margin: 0 auto;
 	clear: both;
@@ -22,9 +25,9 @@ html {
 	overflow: hidden;
 	
 	width: 100vw;
-	height:100vh;
+	height: 200vh;
 	width: calc(var(--vw, 1vw) * 100);
-	height: calc(var(--vh, 1vh) * 100);
+	height: calc(var(--vh, 1vh) * 200);
 	
 	text-align: center;
 	
@@ -605,6 +608,7 @@ button:focus {
 	font-family: 'Roboto Mono', monospace;
 	font-size: 1.5vh;
 	font-weight: 300;
+	line-height: 200%;
 	color: #000000;
 }
 #address a {

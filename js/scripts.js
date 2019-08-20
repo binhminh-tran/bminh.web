@@ -72,6 +72,7 @@ $(document).ready(function() {
 	var intro = document.getElementById("intro-container");
 	setTimeout(function(){
     	intro.style.display = 'none';
+		$("#indicator").fadeIn(200,"linear");
 	}, 7700); 
 	
 	$(window).scroll(function() {
