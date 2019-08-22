@@ -1,22 +1,20 @@
 // JavaScript Document
 $(document).ready(function() {
-	/* SMOOTH SCROLL MOBILE */
+	/* MOBILE HOVER */
 	document.addEventListener("touchstart", function() {}, true);
 	
 	/* OPEN MENU MOBILE */
 	$("#menu-mobile").click(
 		function(){ 
-	  		$("#menu-mb-overlay, #overlay-container").fadeToggle(200,"linear");
-			$("#overlay-container").removeClass("closeOverlay");
+	  		$("#menu-mb-overlay").fadeToggle(200,"linear");
 		}
 	);
 	
 	/* CLOSE MENU MOBILE */
 	$("#menu-mb-overlay").click(
 		function(){ 
-	  		$("#menu-mb-overlay, #overlay-container").fadeOut(200,"linear");
-			$("#overlay-container").addClass("closeOverlay");
-	}
+	  		$("#menu-mb-overlay").fadeOut(200,"linear");
+		}
 	);
 	
 	/* OPEN OVERLAY */
@@ -26,18 +24,22 @@ $(document).ready(function() {
 			$("#overlay-container, #close-bttn").fadeIn(200,"linear"); 
 			$("#overlay-content-"+i).fadeIn(200,"linear"); 
 			$("#indicator, #menu-mobile").fadeOut(200,"linear"); 
+			$("#logo").addClass('logo-state2').removeClass('logo-state1');
+			$("#logo a > svg").addClass("svg-state2").removeClass("svg-state1");
 			document.body.style.overflow = "hidden";
-		
-	}
+		}
 	);
 	
 	/* CLOSE OVERLAY */
 	$(".closeOverlay").click(
 		function() { 
-			$(".closeOverlay, *[id^='overlay-content-']").fadeOut(200,"linear"); 
+			$("#overlay-container,.closeOverlay, *[id^='overlay-content-']").fadeOut(200,"linear"); 
+			$("#overlay-container").scrollTop(0);
+			$("#logo").addClass('logo-state1').removeClass('logo-state2');
+			$("#logo a > svg").addClass("svg-state1").removeClass("svg-state2");
+			$("#indicator, #menu-mobile").fadeIn(200,"linear");
 			setTimeout(function(){
 				document.body.style.overflow = "auto";
-				$("#indicator, #menu-mobile").fadeIn(200,"linear");
 			}, 200);		 
 		}
 	);
@@ -45,11 +47,11 @@ $(document).ready(function() {
 	/* SCROLL TO BLOCK */
 	$("#menu > ul > li > a, #menu-mb-overlay > ul > li > a").click(
 		function(e){
-		e.preventDefault();
-		$('html, body').animate({
-			scrollTop: $( $(this).attr('href') ).offset().top
-		}, 500);
-	}
+			e.preventDefault();
+			$('html, body').animate({
+				scrollTop: $( $(this).attr('href') ).offset().top
+			}, 500);
+		}
 	);
 	
 	/* GET VW VH UNIT */
@@ -77,7 +79,7 @@ $(document).ready(function() {
 			// background color
 			wapperBg:'#000000',
 			// inner color
-			innerBg:'#24BAA0',
+			innerBg:'#ff6f61',
 			effect:'ease-out',
 			duration:'0.2s'
 		});
@@ -99,9 +101,8 @@ $(document).ready(function() {
 	
 	/* HIDE INTRO */
 	var intro = document.getElementById("intro-container");
-	setTimeout(function(){
-    	intro.style.display = 'none';
-	}, 7700); 
+	setTimeout(function(){ intro.style.display = 'none'; }, 7700); 
+	setTimeout(function(){ $("#indicator").fadeIn(200,"linear"); }, 7700);
 	
 	/* MENU SCROLL CHANGE */
 	$(window).scroll(function() {

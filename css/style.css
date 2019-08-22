@@ -8,12 +8,8 @@ a {
 li {
 	list-style-type: none;
 }
-/*html {
-	scroll-behavior: smooth;
-} */
 #indicator {
-	opacity: 0;
-	animation: fadeIN 1.2s 6.5s ease-in forwards;
+	display: none;
 }
 #wrapper {
 	margin: 0 auto;
@@ -72,7 +68,7 @@ li {
 	padding-left: 2em;
 }
 
-/*------Dynamic Vertical Nav Bar------*/
+/*------Dynamic Vertical Nav Bar-------------*/
 #logo {
 	position: fixed;
 	top: 5vh;
@@ -125,10 +121,10 @@ li {
 	transition: all 0.5s ease-out;
 }
 #menu li a:hover {
-	color: #24BAA0;
+	color: #FF5B5B;
 }
 .extend_fx {
-	color: #24BAA0;
+	color: #FF5B5B;
 	margin-bottom: 50px;
 }
 #slink {
@@ -139,9 +135,11 @@ li {
 	width: 25px;
 }
 #slink svg:hover {
-	fill: #24BAA0;
+	fill: #FF5B5B;
 }
 /*------End Of Dynamic Vertical Nav Bar------*/
+
+/*------Mobile Menu--------------------------*/
 #menu-mb-overlay {
 	display: none;
 }
@@ -156,6 +154,8 @@ li {
 		padding-top: 0px; 
 		margin-top: 0px;
 }
+/*------End Of Mobile Menu-------------------*/
+
 .block {
 	position: relative;
 	display: inline-block;
@@ -278,7 +278,6 @@ li {
 }
 /*------End Of Content Block #1------*/
 
-
 /*------Content Block #2-------------*/
 #fire-container {
 	position: absolute;
@@ -384,7 +383,7 @@ button:focus {
 	line-height: 150%;
 	color: #000000;
 }
-.switch button:focus {
+.switch button:hover {
     text-decoration: underline;
 }
 .nav {
@@ -403,7 +402,6 @@ button:focus {
 	color: #000000;
 	line-height: 90%;
     padding: 10px 0px;
-	transition: color 0.2s ease-in-out;
 }
 .nav li > ul {
 	margin-top: 10%;
@@ -423,12 +421,16 @@ button:focus {
 	color: #000000;
     padding: 2px 0px;
 	transition: color 0.2s ease-in-out;
-}
-.nav li button {
 	line-height: 150%;
-}}
-.nav li button:hover, .nav li:hover {
-    color: #24BAA0;
+}
+.nav > li > a {
+	transition: color 0.2s ease-in-out;
+}
+.nav > li:hover {
+    color: #FF5B5B;
+}
+.nav li > ul > li > button:hover {
+	text-decoration: underline;
 }
 
 /*------End of Navgoco CSS-----------*/	
@@ -439,6 +441,10 @@ button:focus {
 	margin-left: 10%;
 	margin-top: 10%;
 	padding: 0 0;
+}
+#pframe svg {
+	width: 30vw;
+	height: 32vw;
 }
 .p-atb {
 	position: absolute;
@@ -478,7 +484,7 @@ button:focus {
 #close-bttn {
 	position: fixed;
 	top: 15px;
-	right: 15px;
+	right: 30px;
 	display:none;
 	z-index:401;
 }
@@ -488,20 +494,20 @@ button:focus {
 	transition: fill 0.2s ease;
 }
 #close-bttn:hover svg {
-	fill: #24BAA0;
+	fill: #FF5B5B;
 }
 #overlay-container {
 	display: none;
+	-webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
 	position: fixed;
 	overflow-y: scroll;
-	overflow-y: overlay;
-	-webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
+	overflow-x: hidden;
 	top: 0; right: 0; bottom: 0; left: 0;
 	height:100vh;
 	width: 100vw;
 	width: calc(var(--vw, 1vw) * 100);
 	height: calc(var(--vh, 1vh) * 100);
-	background: rgba(0, 0, 0, 0.95);
+	background: rgba(0, 0, 0, 0.9);
 	z-index: 300;
 }
 .overlay-atb {
@@ -510,86 +516,115 @@ button:focus {
 	transform: translateX(-50%);
 	z-index: 202;
 	display: none;
-	overflow-y: scroll;
-	overflow-y: overlay;
 	
 	width: 75vw;
 	width: calc(var(--vw, 1vw) * 75);
-	height: 100vh;
-	height: calc(var(--vh, 1vh) * 100);
 	
 	text-align: center;
 	
-	background-color: #000000;
+	background: rgba(0, 0, 0, 0.9);
 	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 }
-.overlay-atb > .column {
+.overlay-atb .column {
 	position: relative;
 	display: inline-block;
 	vertical-align: top;
 	text-align: left;
 }
 .c-01 {
-	width: 87%;
-	margin-top: 10%;
-	margin-bottom: 5%;
+	width: 60%;
+	margin-top: 7%;
+	margin-bottom: 2%;
 }
 .c-02 {
-	width: 50%;
+	width: 40%;
 	margin-bottom: 5%;
+}
+.c-03 {
+	width: 100%;
 }
 .column h2 {
 	font-family: 'Roboto Slab', serif;
-	font-size: 3vh;
-	font-weight: 700;
+	font-size: 5vh;
+	font-weight: 500;
 	color: #ffffff;
 	margin: 0 auto;
+	text-align: center;
 }
 .column p {
 	font-family: 'Roboto Mono', monospace;
-	font-size: 1.5vh;
-	font-weight: 300;
-	color: #ffffff;
+	text-align: center;
 }
 .c-01 p span { 
-    background:#000000; 
-    padding-right:2%; 
+    background: rgba(0, 0, 0, 0.9);
+    padding:0 0%; 
 }
 .c-01 p {
-	margin-top: 3%;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	border-bottom: 1px solid rgba(255,91,91,0.5);
 	line-height: 0.1em;
+	color: #FF5B5B;
+	font-size: 2vh;
+	font-weight: 400;
 }
 .c-02 p {
 	margin: 0 auto;
 	line-height: 150%;
+	color: #ffffff;
+	font-size: 1.5vh;
+	font-weight: 300;
 }
-.test-img {
+.c-03 p {
+	position: relative;
+	margin: 0 auto;
+	line-height: 150%;
+	color: #ffffff;
+	font-size: 1em;
+	font-weight: 400;
+	margin-top: -1%;
+}
+.c-03 p span{
+	color: #FF5B5B;
+	font-weight: 400;
+}
+.container-1 {
+	height: 100vh;
+	height: calc(var(--vh, 1vh) * 100);
+	margin-bottom: 5%;
+}
+.container-2 {
+	margin-bottom: 3%;
+}
+.img-container {
 	position: relative;
 	display: inline-block;
-	
-	width: 90%;
-	height: 70%;
-	background-color: #3D3D3D;
-	
-	margin-bottom: 2%;
+	width: 100%;
+	background:none;
+}
+.img-container img {
+	position: relative;
+	display: inline-block;
+	box-shadow: 7.8px 7.8px 8.9px rgba(0, 0, 0, 0.2); 
+}
+.img80W {
+	width: 80%;
+	margin-bottom: 3%;
+}
+.img100W {width: 100%; margin-bottom: 1.5%;}
+.img9H {
+	height:90%;
+	margin: 3% auto;
+}
+.img8W {
+	width:80%;
+	margin: 3% auto;
+}
+.container-2 img {
+	width:35%;
+	margin: 2% 5%;
 }
 /*------Overlay Scrollbar------*/
 .overlay-atb::-webkit-scrollbar {
-   	width: 7px;
-}
-/* Track 
-.overlay-atb::-webkit-scrollbar-track {
- 	background: none;
-}
-/* Handle 
-.overlay-atb::-webkit-scrollbar-thumb {
- 	background: #6E6E6E;
-	border-radius: 7px;
-}
-/* Handle on hover 
-.overlay-atb::-webkit-scrollbar-thumb:hover {
- 	background: #C0C0C0;
+   	width: 0;
 }
 /*------Overlay Scrollbar------------*/
 /*------End Of Overlay Content-------*/
@@ -621,22 +656,29 @@ button:focus {
 	transition: color 0.2s ease-in-out;
 }
 #address a:hover {
-	color: #24BAA0;
+	color: #FF5B5B;
 }
 /*------End Of Content Block #4------*/
 
-
 /*------Footer-----------------------*/
-#footer {
-	text-align: center;
+#foot {
+	position: relative;
 	width: 100%;
 	height: 5vh;
+	margin: 0 0;
+	padding: 0 0;
 }
-#footer p {
+#foot p {
+	position: relative;
 	font-family: 'Roboto Slab', serif;
-	font-size: 0.9vh;
+	font-size: 0.5em;
 	font-weight: 400;
 	letter-spacing: 1px;
-	color: #000000
+	color: #000000;
+	
+	text-align: center;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 /*------End Of Footer----------------*/
