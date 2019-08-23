@@ -27,7 +27,7 @@ li {
 	height: calc(var(--vh, 1vh) * 200);
 	
 	text-align: center;
-	
+
 	background-color: #000000;
 	z-index: 500;
 	animation: fadeOUT 1.2s 6.5s ease-in forwards;
@@ -480,6 +480,39 @@ button:focus {
 	background-color: cyan;
 }
 
+
+/*------End Of Content Block #3------*/
+
+
+/*------Content Block #4-------------*/
+#address {
+	position: relative;
+	text-align: center;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+#address p {
+	position: relative;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 1.5vh;
+	font-weight: 300;
+	line-height: 150%;
+	color: #000000;
+}
+#address a {
+	position: relative;
+	font-family: 'Roboto Slab', serif;
+	font-size: 6vh;
+	font-weight: 300;
+	color: #000000;
+	transition: color 0.2s ease-in-out;
+}
+#address a:hover {
+	color: #FF5B5B;
+}
+/*------End Of Content Block #4------*/
+
 /*------Overlay Content--------------*/
 #close-bttn {
 	position: fixed;
@@ -491,6 +524,7 @@ button:focus {
 #close-bttn svg {
 	height: 22px;
 	fill: #565656;
+	padding: 20px;
 	transition: fill 0.2s ease;
 }
 #close-bttn:hover svg {
@@ -571,7 +605,7 @@ button:focus {
 	line-height: 150%;
 	color: #ffffff;
 	font-size: 1.5vh;
-	font-weight: 300;
+	font-weight: 400;
 }
 .c-03 p {
 	position: relative;
@@ -626,39 +660,31 @@ button:focus {
 .overlay-atb::-webkit-scrollbar {
    	width: 0;
 }
-/*------Overlay Scrollbar------------*/
-/*------End Of Overlay Content-------*/
-/*------End Of Content Block #3------*/
-
-
-/*------Content Block #4-------------*/
-#address {
+.demo {
 	position: relative;
-	text-align: center;
-	top: 45%;
+	height: auto;
+	width: 100%;
+	margin-bottom: 3%;
+}
+.demo > img {
+	position: relative;
+	pointer-events: none;
+	z-index: 1;
+}
+.video-container {
+	position: absolute;
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
+	width: 58.8%;
+	height: 82.8%;
+	z-index: 0;
 }
-#address p {
-	position: relative;
-	font-family: 'Roboto Mono', monospace;
-	font-size: 1.5vh;
-	font-weight: 300;
-	line-height: 150%;
-	color: #000000;
+.video-container iframe {
+	height: 100%;
+	width:100%;
 }
-#address a {
-	position: relative;
-	font-family: 'Roboto Slab', serif;
-	font-size: 6vh;
-	font-weight: 300;
-	color: #000000;
-	transition: color 0.2s ease-in-out;
-}
-#address a:hover {
-	color: #FF5B5B;
-}
-/*------End Of Content Block #4------*/
+/*------End Of Overlay Content-------*/
 
 /*------Footer-----------------------*/
 #foot {

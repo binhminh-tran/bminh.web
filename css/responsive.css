@@ -102,12 +102,6 @@
 	#slink svg {
 		width: 30px;
 	}
-	#slink svg:hover {
-		fill: #000000;
-	}
-	#slink svg:active {
-		fill: #24BAA0;
-	}
 	#vline {
 		visibility: hidden;
 		display: none;
@@ -317,10 +311,8 @@
 		font-size: 0.7em;
 	}
 	#close-bttn {
-		top: 17px;
-		right: 15px;
-		width: 40px;
-		height: 40px;
+		top: 5px;
+		right: 0;
 		z-index: 401;
 	}
 	#close-bttn svg {
@@ -341,6 +333,9 @@
 	.img80W, .img8W {
 		width: 100%;
 		margin-bottom: 3%;
+	}
+	.video-container {
+		width:74%;
 	}
 }
 
@@ -448,12 +443,6 @@
 	}
 	#slink svg {
 		width: 30px;
-	}
-	#slink svg:hover {
-		fill: #000000;
-	}
-	#slink svg:active {
-		fill: #24BAA0;
 	}
 	#vline {
 		visibility: hidden;
@@ -665,10 +654,8 @@
 		margin: 1% 5%;
 	}
 	#close-bttn {
-		top: 8px;
-		right: 15px;
-		width: 40px;
-		height: 40px;
+		top: -5px;
+		right: 0;
 		z-index: 401;
 	}
 	#close-bttn svg {
@@ -689,6 +676,9 @@
 	.img9H {
 		height: 90vh;	
 	}
+	.video-container {
+		width:74%;
+	}
 }
 
 /* TABLET PORTRAIT */ 
@@ -701,10 +691,10 @@
 		display: none;
 	}
 	#logo-anim {	
-		width: 130px;
+		width: 20vw;
 	}
 	#myName > h1 {
-		font-size: 4vw;
+		font-size: 2vw;
 	}
 	#logo {
 		top: 0;
@@ -809,12 +799,6 @@
 	#slink svg {
 		width: 35px;
 		margin-right: 5px;
-	}
-	#slink svg:hover {
-		fill: #000000;
-	}
-	#slink svg:active {
-		fill: #24BAA0;
 	}
 	#vline {
 		visibility: hidden;
@@ -1030,10 +1014,8 @@
 		height: initial;
 	}
 	#close-bttn {
-		top: 27px;
-		right: 15px;
-		width: 40px;
-		height: 40px;
+		top: 15px;
+		right: 5px;
 		z-index: 401;
 	}
 	#close-bttn svg {
@@ -1055,6 +1037,9 @@
 		width: 100%;
 		margin-bottom: 3%;
 	}
+	.video-container {
+		width:74%;
+	}
 }
 
 /* TABLET LANDSCAPE */
@@ -1065,6 +1050,9 @@
 	#left_nav, #logo {
 		left: 3vw;
 		left: calc(var(--vw, 1vw) * 3);
+	}
+	#logo-anim {
+		width: 15vw;
 	}
 	#slink svg {
 		width: 33px;
@@ -1140,8 +1128,9 @@
 		left: 10%;
 	}	
 	#close-bttn {
-		top: 25px;
-		right: 25px;
+		top: 5px;
+		right: 5px;
+		z-index: 401;
 	}
 	#close-bttn svg {
 		height: 18px;
@@ -1163,6 +1152,9 @@
 	.img80W, .img8W {
 		width: 100%;
 		margin-bottom: 3%;
+	}
+	.video-container {
+		width:74%;
 	}
 }
 
