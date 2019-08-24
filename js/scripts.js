@@ -92,7 +92,7 @@ $(document).ready(function() {
 		});
 	});	
 	
-	/* LOTTIE OPTIONS 
+	/* LOTTIE OPTIONS */
 	var animation = lottie.loadAnimation(
 		{
 		container: document.getElementById('logo-anim'),
@@ -104,7 +104,7 @@ $(document).ready(function() {
 	);
 	lottie.setSpeed(1.5);
 	setTimeout(function(){ 
-		animation.play(); }, 500);*/
+		animation.play(); }, 500);
 	
 	/* HIDE INTRO */
 	var intro = document.getElementById("intro-container");
