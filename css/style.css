@@ -643,7 +643,10 @@ button:focus {
 	font-weight: 400;
 	text-align: left;
 }
-.c-02 p span { color:#FF5B5B; font-weight: 700;}
+.c-02 p span { 
+	color:#FF5B5B; 
+	font-weight: 700;
+}
 .c-03 p {
 	position: relative;
 	margin: 0 auto;
