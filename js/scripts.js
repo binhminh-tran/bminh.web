@@ -13,7 +13,7 @@ $(document).ready(function() {
 	/* CLOSE MENU MOBILE */
 	$("#menu-mb-overlay").click(
 		function(){ 
-	  		$("#menu-mb-overlay").fadeOut(200,"linear");
+	  		$(this).fadeOut(200,"linear");
 		}
 	);
 	
@@ -31,7 +31,7 @@ $(document).ready(function() {
 	);
 	
 	/* CLOSE OVERLAY */
-	$("#overlay-container, #close-bttn svg, #close-bttn").click(
+	$("#overlay-container, #close-bttn").click(
 		function() { if(event.target === this) {
 			$("#overlay-container, #close-bttn, *[id^='overlay-content-']").fadeOut(200,"linear"); 
 			$("#overlay-container").scrollTop(0);
@@ -51,6 +51,13 @@ $(document).ready(function() {
 			$('html, body').animate({
 				scrollTop: $( $(this).attr('href') ).offset().top
 			}, 500);
+		}
+	);
+	
+	$(".overlay-scrolltop").click(
+		function(e){
+			e.preventDefault();
+			$('#overlay-container').animate({scrollTop:0}, 1400);
 		}
 	);
 	
@@ -101,12 +108,14 @@ $(document).ready(function() {
 	
 	/* HIDE INTRO */
 	var intro = document.getElementById("intro-container");
+	var indicator = $("#indicator");
+	var timeInd = setTimeout(function(){ indicator.fadeIn(200,"linear"); }, 7700);
 	setTimeout(function(){ intro.style.display = 'none'; }, 7700); 
-	setTimeout(function(){ $("#indicator").fadeIn(200,"linear"); }, 7700);
 	$("#intro-container").click(
 		function() { 
 			$(this).fadeOut(500,"linear"); 
-			$("#indicator").fadeIn(500,"linear");
+			indicator.fadeIn(500,"linear");
+			clearTimeout(timeInd);
 		}
 	);
 	

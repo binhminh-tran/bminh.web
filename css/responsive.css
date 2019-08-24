@@ -322,7 +322,7 @@
 	.container-1, .container-2 {
 		height: initial;
 	}
-	.container-1 .img9H {
+	.img9H {
 		height:initial;
 		width: 100%;
 		margin: 4% auto;
@@ -334,9 +334,18 @@
 		width: 100%;
 		margin-bottom: 3%;
 	}
-	.video-container {
+	.demo-l .video-container {
 		width:74%;
 	}
+	.demo-p .video-container {
+		width: 75.13%;
+		height: 85.5%;
+	}
+	.demo-p > .container-1 > .img9H { 
+		top: 0;
+		left: 0;
+		transform: initial;
+	}	
 }
 
 /* PHONE LANDSCAPE */
@@ -654,13 +663,14 @@
 		margin: 1% 5%;
 	}
 	#close-bttn {
-		top: -5px;
-		right: 0;
+		top: -8px;
+		right: 2px;
 		z-index: 401;
 	}
 	#close-bttn svg {
 		fill: #666666;
 		height: 17px;
+		padding:25px;
 	}
 	.img-container {
 		background:none;
@@ -673,11 +683,14 @@
 		margin-bottom: 10%;
 		height: initial;
 	}
-	.img9H {
-		height: 90vh;	
+	.demo-p .video-container {
+		width: 57.7vh;
+		height: 76.95%;
 	}
-	.video-container {
-		width:74%;
+	.demo-p > .container-1 {
+		height: initial;
+		height: 100vh;
+		height: calc(var(--vh, 1vh) * 100);
 	}
 }
 
@@ -1014,18 +1027,19 @@
 		height: initial;
 	}
 	#close-bttn {
-		top: 15px;
-		right: 5px;
+		top: 10px;
+		right: 3px;
 		z-index: 401;
 	}
 	#close-bttn svg {
 		fill: #666666;
-		height: 17px;
+		height: 20px;
+		padding: 25px;
 	}
 	.img-container {
 		background:none;
 	}
-	.container-1 .img9H {
+	.img9H {
 		height:initial;
 		width: 94%;
 		margin: 4% auto;
@@ -1037,8 +1051,17 @@
 		width: 100%;
 		margin-bottom: 3%;
 	}
-	.video-container {
+	.demo-l .video-container {
 		width:74%;
+	}
+	.demo-p > .container-1 > .img9H { 
+		top: 0;
+		left: 0;
+		transform: initial;
+	}
+	.demo-p .video-container {
+		width: 75.13%;
+		height: 85.5%;
 	}
 }
 
@@ -1128,13 +1151,13 @@
 		left: 10%;
 	}	
 	#close-bttn {
-		top: 5px;
-		right: 5px;
+		top: 0px;
+		right: 0px;
 		z-index: 401;
 	}
 	#close-bttn svg {
-		height: 18px;
 		fill: #565656;
+		padding: 25px;
 		transition: fill 0.2s ease;
 	}
 	.overlay-atb {
@@ -1153,7 +1176,7 @@
 		width: 100%;
 		margin-bottom: 3%;
 	}
-	.video-container {
+	.demo-l .video-container {
 		width:74%;
 	}
 }
