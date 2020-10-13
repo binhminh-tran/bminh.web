@@ -1,4 +1,9 @@
 
+//Tooltip
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+
 //Lottie options
 var animation = lottie.loadAnimation(
     {
@@ -9,13 +14,13 @@ var animation = lottie.loadAnimation(
     path: 'https://assets10.lottiefiles.com/packages/lf20_klhomhuo.json',
 }
 );
-lottie.setSpeed(1.5);
+lottie.setSpeed(2);
 setTimeout(function(){ 
     animation.play(); }, 500);
 
 //Hide intro
 var intro = document.getElementById("intro-cont");
-setTimeout(function(){ intro.style.display = 'none'; }, 7700); 
+setTimeout(function(){ intro.style.display = 'none'; }, 5000); 
 $("#intro-cont").click(
     function() { 
         $(this).fadeOut(500,"linear"); 
